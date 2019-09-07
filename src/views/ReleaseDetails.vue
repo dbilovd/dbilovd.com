@@ -1,31 +1,31 @@
 <template>
   	<div>
-		<div class="bg-gray-100 pt-10 pb-20">
+		<div class="bg-gray-100 pt-10 pb-20 px-10">
 			<div class="max-w-4xl mx-auto">
-				<div class="flex flex-row justify-between items-top">
-					<h3 class="w-1/2 uppercase font-semibold text-2xl">
+				<div class="flex flex-col md:flex-row justify-between items-top">
+					<h3 class="w-full md:w-1/2 uppercase font-semibold text-2xl">
 						<span class="block">{{ release.title }}</span>
 						<span class="block text-gray-600 text-sm">{{ release.releasedDate }}</span>
 					</h3>
-					<h4 class="w-1/2 flex flex-row justify-end font-semibold text-gray-600">
+					<h4 class="w-full md:w-1/2 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600">
 						<a :href="release.lyrics" class="uppercase tracking-wide">
 							<i class="fas fa-external-link-alt fa-lite text-xs mr-2"></i>
 							<span>Lyrics</span>
 						</a>
 					</h4>
 				</div>
-				<div class="flex flex-row justify-between mt-8">
-					<div class="w-1/3">
+				<div class="flex flex-col md:flex-row justify-between mt-8">
+					<div class="w-full md:w-1/3">
 						<img :src="release.image" alt="release.title" 
 							class="w-full object-cover object-center rounded shadow-lg">
 					</div>
-					<div class="w-2/3 pl-6 text-lg">
-						<div class="w-full flex flex-row justify-between">
-							<div class="flex flex-col justify-start">
+					<div class="w-full md:w-2/3 md:pl-6 text-lg">
+						<div class="w-full flex flex-col md:flex-row justify-between">
+							<div class="mt-6 md:mt-0 flex flex-col justify-start">
 								<a class="block"
 									v-for="(link, linkIndex) in release.links" :key="linkIndex" :href="link.url" 
 									:target="`__blank_${link.name}`">
-									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-3`"></i>
+									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i>
 									<span>{{ link.actionText }}</span>
 								</a>
 								<div class="mt-2">
@@ -40,8 +40,8 @@
 									</a>
 								</div>
 							</div>
-							<div class="">
-								<button class="block bg-white hover:bg-gray-300 text-gray-800 font-semibold font-bold py-1 px-3 border border-gray-200 rounded shadow rounded items-center">
+							<div class="mt-6 md:mt-0">
+								<button class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold font-bold py-2 px-3 border border-gray-900 rounded shadow rounded items-center">
 									<svg class="fill-current w-3 h-4 mr-2 inline-block" xmlns="http://www.w3.org/2000/svg" 
 										viewBox="0 0 20 20">
 										<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>

@@ -233,7 +233,8 @@ export default new Vuex.Store({
 
 	mutations: {
 		'FETCH_INITIAL_BLOG_POSTS' (state) {
-			fetch('//dbilovd-blog.herokuapp.com/api?tags[]=music')
+			// fetch('//dbilovd-blog.herokuapp.com/api?tags[]=music')
+			fetch('//dbilovd-blog.herokuapp.com/api')
 				.then((res) => res.json())
 				.then((data) => {
 					state.posts = data.posts.map((post) => {
