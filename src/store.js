@@ -12,13 +12,22 @@ export default new Vuex.Store({
 				'title': 'Hymns for Tomorrow',
 				'image': '/images/hft.png',
 				'releasedDate': 'Sept, 2019',
-				'description': "I'm putting together about 6 to 8 songs that has greatly helped me this past few months"
+				'description': "I'm putting together about 6 to 8 songs that has greatly helped me this past few months",
+				'links': [
+					{
+						'name': "Spotify",
+						'url': 'https://open.spotify.com/playlist/6uQjWI8u1TuNCjwDFjwuxM?si=mn-SKUZyTry-s8W_3pCEmA',
+						'actionText': 'Listen on Spotify',
+						'icon': 'fa-spotify'
+					},
+				],
 			},
 			{
 				'id': 'hft-journey',
 				'type': 'single',
 				'title': 'Journey',
 				'image': '/images/journey.png',
+				'lyrics': 'https://genius.com/Dbilovd-journey-lyrics',
 				'releasedDate': '27th September, 2019',
 				'links': [
 					{
@@ -49,7 +58,7 @@ export default new Vuex.Store({
 						'name': "iTunes",
 						'url': '#',
 						'actionText': 'Buy from iTunes',
-						'icon': 'fa-itunes'
+						'icon': 'fa-itunes-note'
 					},
 					{
 						'name': "Google Play",
@@ -85,6 +94,7 @@ export default new Vuex.Store({
 				'title': 'My All',
 				'image': '/images/myall.png',
 				'releasedDate': '27th September, 2019',
+				'lyrics': 'https://genius.com/Dbilovd-my-all-lyrics',
 				'links': [
 					{
 						'name': "Spotify",
@@ -114,7 +124,7 @@ export default new Vuex.Store({
 						'name': "iTunes",
 						'url': '#',
 						'actionText': 'Buy from iTunes',
-						'icon': 'fa-itunes'
+						'icon': 'fa-itunes-note'
 					},
 					{
 						'name': "Google Play",
@@ -146,6 +156,12 @@ export default new Vuex.Store({
 			},
 		],
 		links:[
+			{
+				'name': "Contact",
+				'type': 'social',
+				'url': 'mailto:dbilovd@gmail.com',
+				'icon': 'fas fa-envelope'
+			},
 			{
 				'name': "Twitter",
 				'type': 'social',
@@ -201,7 +217,9 @@ export default new Vuex.Store({
 				'icon': 'fa-amazon'
 			}
 		],
+		posts: []
 	},
+
 	getters: {
 		albumReleases: (state)  => state.releases.filter((release) => release.type == 'album'),
 		singleReleases: (state)  => state.releases.filter((release) => release.type == 'single'),
@@ -210,11 +228,36 @@ export default new Vuex.Store({
 		},
 		musicLinks: (state)  => state.links.filter((link) => link.type == 'music'),
 		socialMediaLinks: (state)  => state.links.filter((link) => link.type == 'social'),
+		latestThreePosts: (state) => state.posts.slice(0, 3),
 	},
+
 	mutations: {
-
+		'FETCH_INITIAL_BLOG_POSTS' (state) {
+			fetch('//dbilovd-blog.herokuapp.com/api?tags[]=music')
+				.then((res) => res.json())
+				.then((data) => {
+					state.posts = data.posts.map((post) => {
+						return {
+							'id'	: post.id,
+							'slug'	: post.slug,
+							'title'	: post.title,
+							'intro'	: post.excerpt,
+							'image'	: post.featured_image,
+							'url'	: '#',
+							'type'	: 'podcast'
+						}
+					});
+				})
+				.catch((err) => {
+					debugger;
+					console.error("An Error Occurred: " + err);
+				});
+		}
 	},
-	actions: {
 
+	actions: {
+		fetchPosts ({ commit }) {
+			commit('FETCH_INITIAL_BLOG_POSTS');
+		}
 	}
 })

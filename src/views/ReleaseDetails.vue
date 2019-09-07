@@ -8,7 +8,7 @@
 						<span class="block text-gray-600 text-sm">{{ release.releasedDate }}</span>
 					</h3>
 					<h4 class="w-1/2 flex flex-row justify-end font-semibold text-gray-600">
-						<a href="" class="uppercase tracking-wide">
+						<a :href="release.lyrics" class="uppercase tracking-wide">
 							<i class="fas fa-external-link-alt fa-lite text-xs mr-2"></i>
 							<span>Lyrics</span>
 						</a>

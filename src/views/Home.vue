@@ -58,11 +58,13 @@
 		<div class="bg-gray-100 py-20">
 			<div class="max-w-4xl mx-auto">
 				<div class="flex flex-row justify-between items-center mb-10">
-					<h3 class="uppercase font-semibold text-xl">Blog Posts & Podcasts</h3>
-					<a href="#" class="block uppercase tracking-wide border-b-4 border-gray-600">See More ...</a>
+					<h3 class="uppercase font-semibold text-xl">Latest Updates</h3>
+					<a href="#" class="block uppercase tracking-wide border-b-4 border-gray-600"
+						v-if="posts.length > 0">See More ...</a>
 				</div>
-				<div class="flex flex-row justify-start mb-20">
-					<div class="w-1/3 mr-4" v-for="(post, postIndex) in posts" :key="postIndex">
+				<h3 v-if="posts.length == 0" class="capitalize text-3xl mb-20">No Update Right Now</h3>
+				<div class="flex flex-row justify-start mb-20 -ml-6" v-else>
+					<div class="w-1/3 ml-6" v-for="(post, postIndex) in posts" :key="postIndex">
 						<div class="bg-white shadow-lg border rounded w-full overflow-hidden">
 							<img :src="post.image" :alt="post.title" class="w-full h-48 object-cover object-center">
 							<div class="p-4">
@@ -83,7 +85,7 @@
 <script type="text/javascript">
 	'use strict';
 
-	import { mapGetters } from 'vuex';
+	import { mapGetters, mapActions } from 'vuex';
 	import SingleRelease from '@/components/SingleRelease';
 
 	const HomePage = {
@@ -91,30 +93,22 @@
 			SingleRelease,
 		},
 
-		data: () => ({
-			posts: [
-				{
-					'title': 'New Song: Journey',
-					'intro': 'One of two songs making up the first instalment of the Hymns for Tomorrow project.',
-					'image': '/images/release-1.png',
-					'url': '#',
-					'type': 'podcast'
-				},
-				{
-					'title': 'New Song: My All',
-					'intro': 'One of two songs making up the first instalment of the Hymns for Tomorrow project.',
-					'image': '/images/release-2.png',
-					'url': '#',
-					'type': 'podcast'
-				}
-			],
-		}),
+		data: () => ({}),
+
+		created () {
+			this.fetchPosts();
+		},
 
 		computed: {
 			...mapGetters({
 				'singles': 'singleReleases', 
-				'streams': 'musicLinks'
-			})
+				'streams': 'musicLinks',
+				'posts': 'latestThreePosts', 
+			}),
+		},
+
+		methods: {
+			...mapActions([ 'fetchPosts' ])
 		}
 	};
 

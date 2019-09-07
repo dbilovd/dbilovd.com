@@ -8,14 +8,7 @@
 
 		<!--
 		<div class="mt-10 mb-20 pt-6 flex flex-row justify-between">
-			<div class="flex flex-row items-center justify-center -ml-6">
-				<a class="inline-block ml-6 text-center" :target="`__blank_${channel.name}`" 
-					v-for="(channel, channelIndex) in channels" :key="channelIndex" :href="channel.url">
-					<i :class="`fab ${channel.icon} block text-xl`"></i>
-					<span class="block mt-2">{{ channel.name }}</span>
-				</a>
-				<a href="#" class="inline-block ml-6 text-xl">...</a>
-			</div>
+			
 			<div class="">
 				<router-link to="/releases" class="block bg-white hover:bg-gray-100 text-gray-800 font-semibold font-bold py-3 px-8 border border-gray-400 rounded shadow rounded items-center">
 					<svg class="fill-current w-4 h-4 mr-4 inline-block" xmlns="http://www.w3.org/2000/svg" 
@@ -41,13 +34,23 @@
 								<img :src="album.image" :alt="album.title" class="w-full h-full object-cover object-center">
 							</div>
 						</div>
-						<div class="w-2/3 ml-6">
-							<h4 class="flex flex-row items-center justify-start font-semibold text-gray-600">
-								<span class="bg-teal-600 text-gray-100 text-xs px-3 inline-block rounded uppercase font-semibold tracking-wide mr-2">ongoing</span>
-								<span>From {{ album.releasedDate }}</span>
-							</h4>
-							<h3 class="text-xl font-semibold mt-1">{{ album.title }}</h3>
-							<p class="mt-2">{{ album.description }}</p>
+						<div class="w-2/3 ml-6 flex flex-col justify-between">
+							<div>
+								<h4 class="flex flex-row items-center justify-start font-semibold text-gray-600">
+									<span class="bg-teal-600 text-gray-100 text-xs px-3 inline-block rounded uppercase font-semibold tracking-wide mr-2">ongoing</span>
+									<span>From {{ album.releasedDate }}</span>
+								</h4>
+								<h3 class="text-xl font-semibold mt-1">{{ album.title }}</h3>
+								<p class="mt-2">{{ album.description }}</p>
+							</div>
+							<div class="flex flex-row items-center justify-start -ml-6">
+								<a class="inline-block ml-6 text-center" 
+									v-for="(channel, channelIndex) in album.links" :key="channelIndex" :href="channel.url"
+									:target="`__blank_${channel.name}`">
+									<i :class="`fab ${channel.icon} block text-xl`"></i>
+									<span class="block mt-1 text-xs">{{ channel.name }}</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
