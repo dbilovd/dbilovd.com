@@ -25,6 +25,11 @@ export default new Router({
 	  		path: '/releases',
 	  		name: 'releases',
 	  		component: () => import(/* webpackChunkName: "releases" */ './views/Releases.vue')
+		},
+		{
+	  		path: '/releases/singles/:release',
+	  		name: 'single-release',
+	  		component: () => import(/* webpackChunkName: "single-release" */ './views/ReleaseDetails.vue')
 		}
   	]
 })

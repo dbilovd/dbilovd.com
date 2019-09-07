@@ -2,7 +2,7 @@
   	<div class="home">
 		<div class="w-full h-screen">
 			<div class="w-full h-full">
-				<img src="/images/header-slider-1.jpg" alt="" class="w-full h-full object-cover object-center">		
+				<img src="/images/header-slider-3.jpg" alt="" class="w-full h-full object-cover object-center">		
 			</div>
 		</div>
 
@@ -29,21 +29,18 @@
 				</div>
 
 				<div class="flex flex-row justify-start">
-					<div class="w-1/3 mr-4" v-for="release in releases">
-						<div class="border rounded w-full overflow-hidden h-64">
-							<img :src="release.image" :alt="release.title" class="w-full h-full object-cover object-center">
-						</div>
+					<div class="w-1/3 mr-4" v-for="single in singles">
+						<SingleRelease :release="single"></SingleRelease>
 					</div>
 				</div>
 
 				<div class="mt-10 mb-20 pt-6 flex flex-row justify-between">
 					<div class="flex flex-row items-center justify-center -ml-6">
 						<a class="inline-block ml-6 text-center" :target="`__blank_${channel.name}`" 
-							v-for="(channel, channelIndex) in channels" :key="channelIndex" :href="channel.url">
+							v-for="(channel, channelIndex) in streams" :key="channelIndex" :href="channel.url">
 							<i :class="`fab ${channel.icon} block text-xl`"></i>
 							<span class="block mt-2">{{ channel.name }}</span>
 						</a>
-						<a href="#" class="inline-block ml-6 text-xl">...</a>
 					</div>
 					<div class="">
 						<router-link to="/releases" class="block bg-white hover:bg-gray-100 text-gray-800 font-semibold font-bold py-3 px-8 border border-gray-400 rounded shadow rounded items-center">
@@ -86,35 +83,15 @@
 <script type="text/javascript">
 	'use strict';
 
+	import { mapGetters } from 'vuex';
+	import SingleRelease from '@/components/SingleRelease';
+
 	const HomePage = {
+		components: {
+			SingleRelease,
+		},
+
 		data: () => ({
-			releases: [
-				{
-					'title': 'Journey',
-					'image': '/images/release-1.png',
-				},
-				{
-					'title': 'My All',
-					'image': '/images/release-2.png',
-				}
-			],
-			channels: [
-				{
-					'name': "Spotify",
-					'url': 'https://open.spotify.com/artist/5xvyAXQfTzG95lXHos2ZDn',
-					'icon': 'fa-spotify'
-				},
-				{
-					'name': "Apple Music",
-					'url': '#',
-					'icon': 'fa-apple'
-				},
-				{
-					'name': "Youtube",
-					'url': '#',
-					'icon': 'fa-youtube'
-				}
-			],
 			posts: [
 				{
 					'title': 'New Song: Journey',
@@ -131,7 +108,14 @@
 					'type': 'podcast'
 				}
 			],
-		})
+		}),
+
+		computed: {
+			...mapGetters({
+				'singles': 'singleReleases', 
+				'streams': 'musicLinks'
+			})
+		}
 	};
 
 	export default HomePage;

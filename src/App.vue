@@ -32,19 +32,8 @@
 						</div>
 						<h3 class="mt-10">&copy; Copyright Dbilovd 2019</h3>
 					</div>
-					<div class="w-1/2 flex flex-col">
-						<h3 class="font-semibold text-gray-100">Subscribe for updates</h3>
-						<p class="text-sm text-gray-400">Be the first to know when I release new music.</p>
-						<form class="w-full max-w-lg mt-4">
-							<div class="w-full flex items-center border-b border-b-2 border-orange-100 py-2">
-								<input class="appearance-none bg-transparent border-none w-1/5 text-gray-300 placeholder-gray-600 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="John" aria-label="First name">
-								<input class="appearance-none bg-transparent border-none w-1/5 text-gray-300 placeholder-gray-600 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Doe" aria-label="Last name">
-								<input class="appearance-none bg-transparent border-none w-2/5 text-gray-300 placeholder-gray-600 mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="you@gmail.com" aria-label="Email">
-								<button class="flex-shrink-0 bg-orange-100 hover:bg-orange-300 border-orange-100 hover:border-orange-300 text-sm border-4 text-gray-800 py-1 px-2 rounded w-1/5" type="button">
-									Subscribe
-								</button>
-  							</div>
-  						</form>
+					<div class="w-1/2">
+						<FooterComponent></FooterComponent>
 					</div>
 				</div>
 			</div>
@@ -53,46 +42,21 @@
 </template>
 
 <script type="text/javascript">
+	'use strict';
+
+	import { mapState } from 'vuex';
+	import FooterComponent from '@/components/Footer';
+
 	const App = {
-		data: () => ({
-			channels: [
-				{
-					'name': "Twitter",
-					'url': 'https://twitter.com/DbilovdMusic',
-					'icon': 'fa-twitter'
-				},
-				{
-					'name': "Instagram",
-					'url': 'https://instagram.com/DbilovdMusic',
-					'icon': 'fa-instagram'
-				},
-				{
-					'name': "Facebook",
-					'url': 'https://web.facebook.com/Dbilovd-648603108976540/',
-					'icon': 'fa-facebook'
-				},
-				{
-					'name': "Youtube",
-					'url': '#',
-					'icon': 'fa-youtube'
-				},
-				{
-					'name': "Spotify",
-					'url': 'https://open.spotify.com/artist/5xvyAXQfTzG95lXHos2ZDn',
-					'icon': 'fa-spotify'
-				},
-				{
-					'name': "Apple Music",
-					'url': '#',
-					'icon': 'fa-apple'
-				},
-				{
-					'name': "Amazon",
-					'url': '#',
-					'icon': 'fa-amazon'
-				}
-			],
-		})
+		components: {
+			FooterComponent,
+		},
+
+		data: () => ({}),
+
+		computed: {
+			...mapState({ 'channels': 'links'})
+		}
 	};
 
 	export default App;

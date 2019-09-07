@@ -62,9 +62,7 @@
 
 				<div class="flex flex-row justify-start">
 					<div class="w-1/3 mr-4" v-for="single in singles">
-						<div class="border shadow rounded w-full overflow-hidden h-64">
-							<img :src="single.image" :alt="single.title" class="w-full h-full object-cover object-center">
-						</div>
+						<SingleRelease :release="single"></SingleRelease>
 					</div>
 				</div>
 			</div>
@@ -75,29 +73,22 @@
 <script type="text/javascript">
 	'use strict';
 
+	import { mapGetters } from 'vuex';
+	import SingleRelease from '@/components/SingleRelease';
+
 	const Releases = {
-		data: () => ({
-			albums: [
-				{
-					'title': 'Hymns for Tomorrow',
-					'image': '/images/release-1.png',
-					'releasedDate': 'Sept, 2019',
-					'description': "I'm putting together about 6 to 8 songs that has greatly helped me this past few months"
-				},
-			],
-			singles: [
-				{
-					'id': 'journey',
-					'title': 'Journey',
-					'image': '/images/release-1.png',
-				},
-				{
-					'id': 'my-all',
-					'title': 'My All',
-					'image': '/images/release-2.png',
-				}
-			],
-		})
+		components: {
+			SingleRelease,
+		},
+
+		data: () => ({}),
+
+		computed: {
+			...mapGetters({ 
+				'albums': 'albumReleases',
+				'singles': 'singleReleases'
+			})
+		}
 	};
 
 	export default Releases;
