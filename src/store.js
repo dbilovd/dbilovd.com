@@ -217,7 +217,15 @@ export default new Vuex.Store({
 				'icon': 'fa-amazon'
 			}
 		],
-		posts: []
+		posts: [],
+		about: {
+			descriptionLines: [ 
+				'My name is David and I make music under the name Dbilovd (The Beloved)',
+				'I love Jesus and I believe I was made to see and show Him glorious. One way I have seen His glory is in the steadfastness of His love to me. Despite my desire to always give Him the glory, I have fallen short many times, yet He still loves me. Songwriting for me is another way I can testify of His love and faithfulness to me.',
+				'My prayer is that God reveals Himself and His glory to you as you listen to these testimonies I share.'
+			],
+			quotes: [],
+		},
 	},
 
 	getters: {
@@ -229,6 +237,7 @@ export default new Vuex.Store({
 		musicLinks: (state)  => state.links.filter((link) => link.type == 'music'),
 		socialMediaLinks: (state)  => state.links.filter((link) => link.type == 'social'),
 		latestThreePosts: (state) => state.posts.slice(0, 3),
+		descriptionLines: (state) => state.about.descriptionLines,
 	},
 
 	mutations: {
