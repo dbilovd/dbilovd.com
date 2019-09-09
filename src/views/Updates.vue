@@ -16,7 +16,7 @@
 				<div class="flex flex-col md:flex-row flex-wrap justify-start mb-20 md:-ml-6" v-else>
 					<div class="w-full md:w-1/3 mt-6 md:pl-6" v-for="(post, postIndex) in posts" :key="postIndex">
 						<div class="bg-white shadow-lg border rounded w-full overflow-hidden">
-							<img :src="post.image" :alt="post.title" class="w-full h-48 object-cover object-center">
+							<img :src="post.image" :alt="post.title" class="w-full h-48 object-cover object-top">
 							<div class="p-4">
 								<h3 class="font-semibold capitalize text-lg">
 									<a :href="`/updates/${post.slug}`">{{ post.title }}</a>
