@@ -7,7 +7,7 @@
 					<div class="flex flex-row flex-wrap items-center justify-start mb-6 -ml-8 md:-ml-4">
 						<a class="inline-block ml-8 md:ml-4 mt-4 text-center" 
 							v-for="(social, socialIndex) in channels" :key="socialIndex" :href="social.url"
-								:target="`__blank_${social.name.toLowerCase()}`">
+								:target="(social.url == '#' ? '' : `__blank_${social.name.toLowerCase()}`)">
 							<i :class="`fab ${social.icon} block text-lg`"></i>
 						</a>
 					</div>
@@ -18,16 +18,19 @@
 					<div class="flex flex-col">
 						<h3 class="font-semibold text-gray-100">Subscribe for updates</h3>
 						<p class="text-sm text-gray-400">Be the first to know when I release new music.</p>
-						<form class="w-full max-w-lg mt-4" @submit.prevent="subscribe">
+						<form class="w-full max-w-lg mt-4" method="POST" :action="subscribe.destination">
 							<div class="w-full flex flex-row flex-wrap md:flex-no-wrap items-center md:border-b md:border-b-2 md:border-orange-100 py-2">
-								<input class="appearance-none bg-transparent border-none w-full md:w-1/5 text-gray-300 placeholder-gray-600 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="John" aria-label="First name">
+								<input type="text" placeholder="John" aria-label="First name" name="FNAME" required
+									class="appearance-none bg-transparent border-none w-full md:w-1/5 text-gray-300 placeholder-gray-600 py-1 px-2 leading-tight focus:outline-none">
 								<hr class="block md:hidden w-full border-b border-b-2 border-orange-100 mt-1">
-								<input class="appearance-none bg-transparent border-none w-full md:w-1/5 text-gray-300 placeholder-gray-600 mt-3 md:mt-0 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Doe" aria-label="Last name">
+								<input type="text" placeholder="Doe" aria-label="Last name" name="LNAME" required
+									class="appearance-none bg-transparent border-none w-full md:w-1/5 text-gray-300 placeholder-gray-600 mt-3 md:mt-0 py-1 px-2 leading-tight focus:outline-none">
 								<hr class="block md:hidden w-full border-b border-b-2 border-orange-100 mt-1">
-								<input class="appearance-none bg-transparent border-none w-full md:w-2/5 text-gray-300 placeholder-gray-600 mt-3 md:mt-0 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="you@gmail.com" aria-label="Email">
+								<input type="email" placeholder="you@gmail.com" aria-label="Email" name="EMAIL" required 
+									class="appearance-none bg-transparent border-none w-full md:w-2/5 text-gray-300 placeholder-gray-600 mt-3 md:mt-0 py-1 px-2 leading-tight focus:outline-none">
 								<hr class="block md:hidden w-full border-b border-b-2 border-orange-100 mt-1">
-								<button class="flex-shrink-0 bg-orange-100 hover:bg-orange-300 border-orange-100 hover:border-orange-300 text-sm border-4 text-gray-800 mt-3 md:mt-0 py-1 px-2 rounded w-full md:w-1/5" 
-									type="button" @click.prevent="subscribe">
+								<button type="submit" name="subscribe" 
+									class="flex-shrink-0 bg-orange-100 hover:bg-orange-300 border-orange-100 hover:border-orange-300 text-sm border-4 text-gray-800 mt-3 md:mt-0 py-1 px-2 rounded w-full md:w-1/5">
 									Subscribe
 								</button>
 							</div>
@@ -47,16 +50,17 @@
 	const FooterComponent = {
 		props: {},
 
-		data: () => ({}),
+		data: () => ({
+			subscribe: {
+				destination: 'https://dbilovd.us4.list-manage.com/subscribe/post?u=d09bba37346feb884f1d288c3&amp;id=b82fd59c83',
+				firstName: '',
+				lastName: '',
+				email: ''
+			}
+		}),
 
 		computed: {
 			...mapState({ 'channels': 'links'})
-		},
-
-		methods: {
-			subscribe () {
-				alert('subscribing...')
-			}
 		}
 	};
 

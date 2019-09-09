@@ -12,6 +12,9 @@
 					<h3 class="uppercase font-semibold text-xl">Albums</h3>
 				</div>
 
+				<h3 v-if="albums.length == 0" class="capitalize text-3xl mb-20">
+					<span class="block">New music is coming soon...</span>
+				</h3>
 				<div class="flex flex-col justify-start">
 					<div class="flex flex-col md:flex-row justify-start" v-for="album in albums">
 						<div class="w-full md:w-1/3">
@@ -48,6 +51,9 @@
 					<h3 class="uppercase font-semibold text-xl">Singles</h3>
 				</div>
 
+				<h3 v-if="singles.length == 0" class="capitalize text-3xl mb-20">
+					<span class="block">New music is coming soon...</span>
+				</h3>
 				<div class="flex flex-col md:flex-row justify-start">
 					<div class="w-full md:w-1/3 mt-4 md:mt-0 md:mr-4" v-for="single in singles">
 						<SingleRelease :release="single"></SingleRelease>

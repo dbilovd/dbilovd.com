@@ -13,9 +13,7 @@
 					<p class="font-semibold italic text-xl mb-10">
 						"God is most glorified in us when we are most satisfied in him." <span>~ John Piper</span>
 					</p>
-					<p class="mb-2">Hello, my name is David. I make music under the name Dbilovd (The Beloved)</p>
-					<p class="mb-2">I love Jesus and I want to do everything for His glory. One way I have seen Him glorious is in His the steadfastness of His love to me. The songs I write are my testimonies of this love and faithfulness I have received.</p>
-					<p class="mb-2">I pray that God reveals Himself - and Jesus, His son - to you as you listen to these testimonies I share.</p>
+					<p class="mb-2" v-for="line in descriptionLines">{{ line }}</p>
 				</div>
 			</div>
 		</div>
@@ -30,6 +28,10 @@
 					</router-link>
 				</div>
 
+				<h3 v-if="singles.length == 0" class="capitalize text-3xl mb-20">
+					<span class="block">Keep watching this space</span>
+					<span class="block">New music is coming soon</span>
+				</h3>
 				<div class="flex flex-col md:flex-row justify-start">
 					<div class="w-full md:w-1/3 mt-4 md:mt-0 md:mr-4" v-for="single in singles">
 						<SingleRelease :release="single"></SingleRelease>
@@ -38,8 +40,9 @@
 
 				<div class="mt-10 mb-0 md:mb-20 pt-6 flex flex-col md:flex-row justify-between">
 					<div class="flex flex-row items-center justify-center -ml-8 md:-ml-6 mb-10 md:mb-0">
-						<a class="inline-block ml-8 md:ml-6 text-center text-gray-800" :target="`__blank_${channel.name}`" 
-							v-for="(channel, channelIndex) in streams" :key="channelIndex" :href="channel.url">
+						<a class="inline-block ml-8 md:ml-6 text-center text-gray-800" 
+							v-for="(channel, channelIndex) in streams" :key="channelIndex" :href="channel.url"
+							:target="(channel.url == '#' ? '' : `__blank_${channel.name}`)">
 							<i :class="`fab ${channel.icon} block text-xl`"></i>
 							<span class="hidden md:block mt-2">{{ channel.name }}</span>
 						</a>
@@ -61,7 +64,7 @@
 			<div class="max-w-4xl mx-auto">
 				<div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-10">
 					<h3 class="uppercase font-semibold text-xl">Latest Updates</h3>
-					<router-link to="#" 
+					<router-link to="/updates" 
 						class="block uppercase tracking-wide text-gray-600 border-b-4 border-gray-600 mt-4 md:mt-0">
 						See More ...
 					</router-link>
@@ -73,10 +76,10 @@
 							<img :src="post.image" :alt="post.title" class="w-full h-48 object-cover object-center">
 							<div class="p-4">
 								<h3 class="font-semibold capitalize text-lg">
-									<a :href="post.url">{{ post.title }}</a>
+									<a :href="`/updates/${post.slug}`">{{ post.title }}</a>
 								</h3>
 								<p class="text-gray-600 h-20 overflow-hidden">{{ post.intro }}</p>
-								<a :href="post.url" class="inline-block mt-2 capitalize tracking-wide text-xs font-semibold border-b border-gray-800">Continue...</a>
+								<a :href="`/updates/${post.slug}`" class="inline-block mt-2 capitalize tracking-wide text-xs font-semibold border-b border-gray-800">Continue...</a>
 							</div>
 						</div>
 					</div>
@@ -107,7 +110,8 @@
 			...mapGetters({
 				'singles': 'singleReleases', 
 				'streams': 'musicLinks',
-				'posts': 'latestThreePosts', 
+				'posts': 'latestThreePosts',
+				'descriptionLines': 'descriptionLines'
 			}),
 		},
 

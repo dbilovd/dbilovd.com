@@ -31,6 +31,16 @@ export default new Router({
 	  		path: '/releases/singles/:release',
 	  		name: 'single-release',
 	  		component: () => import(/* webpackChunkName: "single-release" */ './views/ReleaseDetails.vue')
+		},
+		{
+	  		path: '/updates',
+	  		name: 'updates',
+	  		component: () => import(/* webpackChunkName: "updates" */ './views/Updates.vue')
+		},
+		{
+	  		path: '/updates/:updateSlug',
+	  		name: 'update-details',
+	  		component: () => import(/* webpackChunkName: "update-details" */ './views/UpdateDetails.vue')
 		}
   	]
 })

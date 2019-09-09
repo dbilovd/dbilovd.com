@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 	state: {
 		releases: [
-			{
+			/*{
 				'id': 'hft',
 				'type': 'album',
 				'title': 'Hymns for Tomorrow',
@@ -153,7 +153,7 @@ export default new Vuex.Store({
 						'url': '',
 					}
 				]
-			},
+			},*/
 		],
 		links:[
 			{
@@ -237,24 +237,28 @@ export default new Vuex.Store({
 		musicLinks: (state)  => state.links.filter((link) => link.type == 'music'),
 		socialMediaLinks: (state)  => state.links.filter((link) => link.type == 'social'),
 		latestThreePosts: (state) => state.posts.slice(0, 3),
+		postBySlug: (state) => (slug) => {
+			debugger;
+			return state.posts.find((release) => release.slug == slug)
+		},
 		descriptionLines: (state) => state.about.descriptionLines,
 	},
 
 	mutations: {
 		'FETCH_INITIAL_BLOG_POSTS' (state) {
-			// fetch('//dbilovd-blog.herokuapp.com/api')
-			fetch('//dbilovd-blog.herokuapp.com/api?tags[]=music')
+			fetch('//dbilovd-blog.herokuapp.com/api?tags[]=music&limit=30')
 				.then((res) => res.json())
 				.then((data) => {
 					state.posts = data.posts.map((post) => {
 						return {
-							'id'	: post.id,
-							'slug'	: post.slug,
-							'title'	: post.title,
-							'intro'	: post.excerpt,
-							'image'	: post.featured_image,
-							'url'	: '#',
-							'type'	: 'podcast'
+							'id'		: post.id,
+							'slug'		: post.slug,
+							'title'		: post.title,
+							'intro'		: post.excerpt,
+							'image'		: post.featured_image,
+							'url'		: '#',
+							'type'		: 'podcast',
+							'content'	: post.body
 						}
 					});
 				})
