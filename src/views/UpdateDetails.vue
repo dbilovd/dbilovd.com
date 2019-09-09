@@ -4,7 +4,7 @@
 			<div class="max-w-2xl mx-auto">
 				<h1 class="font-semibold text-2xl my-10 p-6 capitalize">{{ update.title }}</h1>
 
-				<div class="p-6 text-lg" v-html="update.content"></div>
+				<div class="update-content p-6 text-lg" v-html="update.content"></div>
 			</div>
 		</div>
   	</div>

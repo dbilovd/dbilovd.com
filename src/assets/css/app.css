@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
+
+.update-content p {
+	@apply mb-4;
+}
+.update-content a {
+	@apply border-b border-gray-400;
+}
+
 @tailwind utilities;

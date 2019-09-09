@@ -636,6 +636,15 @@ video {
   }
 }
 
+.update-content p {
+  margin-bottom: 1rem;
+}
+
+.update-content a {
+  border-bottom-width: 1px;
+  border-color: #cbd5e0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
