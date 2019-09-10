@@ -36,11 +36,30 @@
 
 		watch: {
 			update (val) {
-				document.title = `${val.title} : Dbilovd`;
-				let meta = document.createElement('meta');
-				meta.name = "description";
-				meta.content = val.intro;
-				document.getElementsByTagName('head')[0].appendChild(meta);
+				if (val) {
+					document.title = `${val.title} : Dbilovd`;
+					let meta = document.createElement('meta');
+					meta.name = "description";
+					meta.content = val.intro;
+					document.getElementsByTagName('head')[0].appendChild(meta);
+
+					let ogTitle = document.createElement('meta');
+					ogTitle.setAttribute('property', 'og:title');
+					ogTitle.content = `${val.title} : Dbilovd`;
+					document.getElementsByTagName('head')[0].appendChild(ogTitle);
+
+					let ogDescription = document.createElement('meta');
+					ogDescription.setAttribute('property', 'og:description');
+					ogDescription.content = val.intro;
+					document.getElementsByTagName('head')[0].appendChild(ogDescription);
+
+					if (val.image) {
+						let ogImage = document.createElement('meta');
+						ogImage.setAttribute('property', 'og:image');
+						ogImage.content = val.image;
+						document.getElementsByTagName('head')[0].appendChild(ogImage);
+					}
+				}
 			}
 		}
 	};
