@@ -32,6 +32,16 @@
 
 		methods: {
 			...mapActions([ 'fetchPosts' ]),
+		},
+
+		watch: {
+			update (val) {
+				document.title = `${val.title} : Dbilovd`;
+				let meta = document.createElement('meta');
+				meta.name = "description";
+				meta.content = val.intro;
+				document.getElementsByTagName('head')[0].appendChild(meta);
+			}
 		}
 	};
 
