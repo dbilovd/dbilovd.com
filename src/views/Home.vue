@@ -57,7 +57,7 @@
 
 				<h3 v-if="singles.length == 0" class="capitalize text-3xl mb-20">
 					<span class="block">Keep watching this space</span>
-					<span class="block">New music is coming soon</span>
+					<span class="block">There is new music coming soon...</span>
 				</h3>
 				<div class="flex flex-col md:flex-row justify-start">
 					<div class="w-full md:w-1/3 mt-4 md:mt-0 md:mr-4" v-for="single in singles">

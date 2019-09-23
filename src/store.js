@@ -226,6 +226,12 @@ export default new Vuex.Store({
 			],
 			quotes: [],
 		},
+		support: {
+			descriptionLines: [ 
+				'<h1 class="text-center font-semibold text-lg uppercase">Coming Soon...</h1>',
+			],
+			quotes: [],
+		},
 	},
 
 	getters: {
@@ -242,6 +248,7 @@ export default new Vuex.Store({
 			return state.posts.find((release) => release.slug == slug)
 		},
 		descriptionLines: (state) => state.about.descriptionLines,
+		supportDescriptionLines: (state) => state.support.descriptionLines,
 	},
 
 	mutations: {

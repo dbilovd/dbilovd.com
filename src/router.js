@@ -20,7 +20,7 @@ export default new Router({
 		{
 	  		path: '/support',
 	  		name: 'support',
-	  		component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+	  		component: () => import(/* webpackChunkName: "support" */ './views/Support.vue')
 		},
 		{
 	  		path: '/releases',
