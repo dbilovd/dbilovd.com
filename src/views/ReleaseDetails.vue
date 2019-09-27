@@ -44,13 +44,15 @@
 								</div>
 							</div>
 							<div class="mt-6 md:mt-0">
-								<button class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold font-bold py-2 px-3 border border-gray-900 rounded shadow rounded items-center">
+								<a class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold font-bold py-2 px-3 border border-gray-900 rounded shadow rounded items-center"
+									:href="release.downloadLink" target="__blank"
+									v-if="release.downloadLink">
 									<svg class="fill-current w-3 h-4 mr-2 inline-block" xmlns="http://www.w3.org/2000/svg" 
 										viewBox="0 0 20 20">
 										<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
 									</svg>
 									<span class="">Download for Free</span>
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>

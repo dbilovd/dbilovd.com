@@ -30,7 +30,7 @@
 								</h4>
 								<h3 class="text-xl font-semibold mt-1">{{ album.title }}</h3>
 								<p class="mt-2">{{ album.description }}</p>
-								<div>
+								<div class="my-8">
 									Songs: 
 									<router-link v-for="(single, singleId) in getAlbumSingles(album.id)" 
 										:to="`/releases/singles/${single.id}`"
