@@ -20,6 +20,12 @@ export default new Vuex.Store({
 						'actionText': 'Listen on Spotify',
 						'icon': 'fa-spotify'
 					},
+					{
+						'name': "Soundcloud",
+						'url': 'https://soundcloud.com/dbilovd/sets/the-hymns-for-tomorrow-project',
+						'actionText': 'Listen on Soundcloud',
+						'icon': 'fa-soundcloud'
+					},
 				],
 			},
 			{
