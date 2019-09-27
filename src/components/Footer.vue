@@ -6,8 +6,9 @@
 					<h1 class="mb-2 font-semibold">Let's Connect</h1>
 					<div class="flex flex-row flex-wrap items-center justify-start mb-6 -ml-8 md:-ml-4">
 						<a class="inline-block ml-8 md:ml-4 mt-4 text-center" 
-							v-for="(social, socialIndex) in channels" :key="socialIndex" :href="social.url"
-								:target="(social.url == '#' ? '' : `__blank_${social.name.toLowerCase()}`)">
+							v-for="(social, socialIndex) in channels" :key="socialIndex"
+							v-if="social.url" :href="social.url"
+							:target="(social.url == '#' ? '' : `__blank_${social.name.toLowerCase()}`)">
 							<i :class="`fab ${social.icon} block text-lg`"></i>
 						</a>
 					</div>

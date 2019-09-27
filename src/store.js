@@ -187,7 +187,7 @@ export default new Vuex.Store({
 			{
 				'name': "Apple Music",
 				'type': 'music',
-				'url': '',
+				'url': 'https://music.apple.com/gh/artist/dbilovd/1479884134',
 				'icon': 'fa-apple'
 			},
 			{
