@@ -20,7 +20,7 @@
 							class="w-full object-cover object-center rounded shadow-lg">
 					</div>
 					<div class="w-full md:w-2/3 md:pl-6 text-lg">
-						<div class="w-full mb-20">
+						<div class="w-full my-10 md:my-0 md:mb-20">
 							<div v-html="release.soundcloudEmbed"></div>
 						</div>
 						<div class="w-full flex flex-col md:flex-row justify-between">
