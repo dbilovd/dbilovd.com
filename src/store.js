@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 	state: {
 		releases: [
-			/*{
+			{
 				'id': 'hft',
 				'type': 'album',
 				'title': 'Hymns for Tomorrow',
@@ -16,7 +16,7 @@ export default new Vuex.Store({
 				'links': [
 					{
 						'name': "Spotify",
-						'url': 'https://open.spotify.com/playlist/6uQjWI8u1TuNCjwDFjwuxM?si=mn-SKUZyTry-s8W_3pCEmA',
+						'url': 'https://open.spotify.com/playlist/3AH5dCJ88TVvrTAildQM3K?si=MKUxiB9cQvOiYAdnRWfJ_w',
 						'actionText': 'Listen on Spotify',
 						'icon': 'fa-spotify'
 					},
@@ -25,6 +25,7 @@ export default new Vuex.Store({
 			{
 				'id': 'hft-journey',
 				'type': 'single',
+				'albumId': 'hft',
 				'title': 'Journey',
 				'image': '/images/journey.png',
 				'lyrics': 'https://genius.com/Dbilovd-journey-lyrics',
@@ -32,43 +33,37 @@ export default new Vuex.Store({
 				'links': [
 					{
 						'name': "Spotify",
-						'url': 'https://open.spotify.com/artist/5xvyAXQfTzG95lXHos2ZDn',
+						'url': 'https://open.spotify.com/track/6MsWjxpIUB18I1HBFiHeYX?si=n8mSdLjhRsC1SlQ-PT1vNQ',
 						'actionText': 'Listen on Spotify',
 						'icon': 'fa-spotify'
 					},
 					{
 						'name': "Apple Music",
-						'url': '#',
+						'url': 'https://music.apple.com/gh/album/journey/1479884495?i=1479884496',
 						'actionText': 'Listen on Apple Music',
 						'icon': 'fa-apple'
 					},
 					{
 						'name': "Youtube",
-						'url': '#',
+						'url': '',
 						'actionText': 'Watch on Youtube',
 						'icon': 'fa-youtube'
 					},
 					{
 						'name': "Soundcloud",
-						'url': '#',
+						'url': 'https://soundcloud.com/dbilovd/journey',
 						'actionText': 'Listen on Soundcloud',
 						'icon': 'fa-soundcloud'
 					},
 					{
-						'name': "iTunes",
-						'url': '#',
-						'actionText': 'Buy from iTunes',
-						'icon': 'fa-itunes-note'
-					},
-					{
 						'name': "Google Play",
-						'url': '#',
+						'url': '',
 						'actionText': 'Buy from Google Play',
 						'icon': 'fa-google-play'
 					},
 					{
 						'name': "Amazon",
-						'url': '#',
+						'url': '',
 						'actionText': 'Buy from Amazon.com',
 						'icon': 'fa-amazon'
 					}
@@ -76,7 +71,7 @@ export default new Vuex.Store({
 				'secondaryLinks': [
 					{
 						'name': "Deezer",
-						'url': '',
+						'url': 'https://www.deezer.com/track/747467632',
 					},
 					{
 						'name': "Tidal",
@@ -86,11 +81,13 @@ export default new Vuex.Store({
 						'name': "Pandora",
 						'url': '',
 					}
-				]
+				],
+				'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687502972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
 			},
 			{
 				'id': 'hft-my-all',
 				'type': 'single',
+				'albumId': 'hft',
 				'title': 'My All',
 				'image': '/images/myall.png',
 				'releasedDate': '27th September, 2019',
@@ -98,43 +95,37 @@ export default new Vuex.Store({
 				'links': [
 					{
 						'name': "Spotify",
-						'url': 'https://open.spotify.com/artist/5xvyAXQfTzG95lXHos2ZDn',
+						'url': 'https://open.spotify.com/track/4Y5IslIuEjttUIqAqe9l2w?si=z9QwbaapQCqvqD0WtGbH4w',
 						'actionText': 'Listen on Spotify',
 						'icon': 'fa-spotify'
 					},
 					{
 						'name': "Apple Music",
-						'url': '#',
+						'url': 'https://music.apple.com/gh/album/my-all/1479884341?i=1479884342',
 						'actionText': 'Listen on Apple Music',
 						'icon': 'fa-apple'
 					},
 					{
 						'name': "Youtube",
-						'url': '#',
+						'url': '',
 						'actionText': 'Watch on Youtube',
 						'icon': 'fa-youtube'
 					},
 					{
 						'name': "Soundcloud",
-						'url': '#',
+						'url': 'https://soundcloud.com/dbilovd/my-all',
 						'actionText': 'Listen on Soundcloud',
 						'icon': 'fa-soundcloud'
 					},
 					{
-						'name': "iTunes",
-						'url': '#',
-						'actionText': 'Buy from iTunes',
-						'icon': 'fa-itunes-note'
-					},
-					{
 						'name': "Google Play",
-						'url': '#',
+						'url': '',
 						'actionText': 'Buy from Google Play',
 						'icon': 'fa-google-play'
 					},
 					{
 						'name': "Amazon",
-						'url': '#',
+						'url': '',
 						'actionText': 'Buy from Amazon.com',
 						'icon': 'fa-amazon'
 					}
@@ -142,7 +133,7 @@ export default new Vuex.Store({
 				'secondaryLinks': [
 					{
 						'name': "Deezer",
-						'url': '',
+						'url': 'https://www.deezer.com/track/745618842',
 					},
 					{
 						'name': "Tidal",
@@ -152,8 +143,9 @@ export default new Vuex.Store({
 						'name': "Pandora",
 						'url': '',
 					}
-				]
-			},*/
+				],
+				'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687501688&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+			}
 		],
 		links:[
 			{
@@ -189,13 +181,13 @@ export default new Vuex.Store({
 			{
 				'name': "Apple Music",
 				'type': 'music',
-				'url': '#',
+				'url': '',
 				'icon': 'fa-apple'
 			},
 			{
 				'name': "Youtube",
 				'type': 'music',
-				'url': '#',
+				'url': '',
 				'icon': 'fa-youtube'
 			},
 			{
@@ -207,13 +199,13 @@ export default new Vuex.Store({
 			{
 				'name': "Google Play",
 				'type': 'music',
-				'url': '#',
+				'url': '',
 				'icon': 'fa-google-play'
 			},
 			{
 				'name': "Amazon",
 				'type': 'music',
-				'url': '#',
+				'url': '',
 				'icon': 'fa-amazon'
 			}
 		],
@@ -237,6 +229,11 @@ export default new Vuex.Store({
 	getters: {
 		albumReleases: (state)  => state.releases.filter((release) => release.type == 'album'),
 		singleReleases: (state)  => state.releases.filter((release) => release.type == 'single'),
+		albumSingles: (state)  => (albumId) => {
+			return state.releases.filter(
+				(release) => release.type == 'single' && release.albumId == albumId
+			)
+		},
 		release: (state) => (id) => {
 			return state.releases.find((release) => release.id == id)
 		},

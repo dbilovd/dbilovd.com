@@ -20,11 +20,14 @@
 							class="w-full object-cover object-center rounded shadow-lg">
 					</div>
 					<div class="w-full md:w-2/3 md:pl-6 text-lg">
+						<div class="w-full mb-20">
+							<div v-html="release.soundcloudEmbed"></div>
+						</div>
 						<div class="w-full flex flex-col md:flex-row justify-between">
 							<div class="mt-6 md:mt-0 flex flex-col justify-start">
 								<a class="block"
 									v-for="(link, linkIndex) in release.links" :key="linkIndex" :href="link.url" 
-									:target="`__blank_${link.name}`">
+									v-if="link.url" :target="`__blank_${link.name}`">
 									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i>
 									<span>{{ link.actionText }}</span>
 								</a>
@@ -33,8 +36,8 @@
 										More:
 									</h5>
 									<a class="inline-block mr-1 underline"
-										v-for="(link, linkIndex) in release.secondaryLinks" :key="linkIndex" :href="link.url" 
-										:target="`__blank_${link.name}`">
+										v-for="(link, linkIndex) in release.secondaryLinks" :key="linkIndex" :href="link.url"
+										v-if="link.url" :target="`__blank_${link.name}`">
 										<span>{{ link.name }}</span>
 										<span v-show="linkIndex < (release.secondaryLinks.length - 1)">,</span>
 									</a>

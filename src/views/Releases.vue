@@ -30,6 +30,14 @@
 								</h4>
 								<h3 class="text-xl font-semibold mt-1">{{ album.title }}</h3>
 								<p class="mt-2">{{ album.description }}</p>
+								<div>
+									Songs: 
+									<router-link v-for="(single, singleId) in getAlbumSingles(album.id)" 
+										:to="`/releases/singles/${single.id}`"
+										class="border-b border-gray-400 mr-4 font-semibold">
+										{{ single.title }}
+									</router-link>
+								</div>
 							</div>
 							<div class="flex flex-row items-center justify-start mt-6 md:mt-0 -ml-6">
 								<a class="inline-block ml-6 text-center" 
@@ -80,8 +88,15 @@
 		computed: {
 			...mapGetters({ 
 				'albums': 'albumReleases',
-				'singles': 'singleReleases'
+				'singles': 'singleReleases',
+				'albumSingles': 'albumSingles',
 			})
+		},
+
+		methods: {
+			getAlbumSingles (id) {
+				return this.albumSingles(id);
+			}
 		}
 	};
 
