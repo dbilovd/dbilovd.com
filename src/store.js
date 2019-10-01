@@ -51,7 +51,7 @@ export default new Vuex.Store({
 					},
 					{
 						'name': "Youtube",
-						'url': '',
+						'url': 'https://www.youtube.com/watch?v=1WmJ0qKjD8U',
 						'actionText': 'Watch on Youtube',
 						'icon': 'fa-youtube'
 					},
@@ -114,7 +114,7 @@ export default new Vuex.Store({
 					},
 					{
 						'name': "Youtube",
-						'url': '',
+						'url': 'https://www.youtube.com/watch?v=2LbTIHCg2DM',
 						'actionText': 'Watch on Youtube',
 						'icon': 'fa-youtube'
 					},
@@ -195,7 +195,7 @@ export default new Vuex.Store({
 			{
 				'name': "Youtube",
 				'type': 'music',
-				'url': '',
+				'url': 'https://www.youtube.com/channel/UCamdhKx59S70KBP5l3D-UfA',
 				'icon': 'fa-youtube'
 			},
 			{
