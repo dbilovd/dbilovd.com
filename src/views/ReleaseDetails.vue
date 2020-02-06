@@ -79,7 +79,7 @@
 		},
 
 		data: () => ({
-			showingDownloadDialog: true,
+			showingDownloadDialog: false,
 		}),
 
 		computed: {
