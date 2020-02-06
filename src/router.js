@@ -18,7 +18,7 @@ export default new Router({
 	  		component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
 		},
 		{
-	  		path: '/support',
+	  		path: '/freely-given',
 	  		name: 'support',
 	  		component: () => import(/* webpackChunkName: "support" */ './views/Support.vue')
 		},

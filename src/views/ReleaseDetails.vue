@@ -1,5 +1,9 @@
 <template>
-  	<div>
+	<div>
+		<DownloadDialog :download-link="release.downloadLink"
+			:showing-dialog="showingDownloadDialog"
+			v-on:close-dialog="closeDownloadDialog"
+			></DownloadDialog>
 		<div class="bg-gray-100 pt-10 pb-20 px-10">
 			<div class="max-w-4xl mx-auto">
 				<div class="flex flex-col md:flex-row justify-between items-top">
@@ -7,7 +11,8 @@
 						<span class="block">{{ release.title }}</span>
 						<span class="block text-gray-600 text-sm">{{ release.releasedDate }}</span>
 					</h3>
-					<h4 class="w-full md:w-1/2 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600">
+					<h4 class="w-full md:w-1/2 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600"
+						v-if="release.lyrics">
 						<a :href="release.lyrics" class="uppercase tracking-wide">
 							<i class="fas fa-external-link-alt fa-lite text-xs mr-2"></i>
 							<span>Lyrics</span>
@@ -31,7 +36,7 @@
 									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i>
 									<span>{{ link.actionText }}</span>
 								</a>
-								<div class="mt-2">
+								<div class="mt-2" v-if="release.secondaryLinks.length > 0">
 									<h5 class="font-semibold text-gray-600 capitalize tracking-wide inline-block mr-3">
 										More:
 									</h5>
@@ -45,8 +50,8 @@
 							</div>
 							<div class="mt-6 md:mt-0">
 								<a class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold font-bold py-2 px-3 border border-gray-900 rounded shadow rounded items-center"
-									:href="release.downloadLink" target="__blank"
-									v-if="release.downloadLink">
+									v-if="release.downloadLink"
+									@click.prevent="showDownloadDialog">
 									<svg class="fill-current w-3 h-4 mr-2 inline-block" xmlns="http://www.w3.org/2000/svg" 
 										viewBox="0 0 20 20">
 										<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
@@ -59,86 +64,41 @@
 				</div>
 			</div>
 		</div>
-  	</div>
+  </div>
 </template>
 
 <script type="text/javascript">
 	'use strict';
 
 	import { mapGetters } from 'vuex';
+	import DownloadDialog from './../components/DownloadDialog.vue';
 
 	const Releases = {
-		data: () => ({}),
+		components: {
+			DownloadDialog,
+		},
+
+		data: () => ({
+			showingDownloadDialog: true,
+		}),
 
 		computed: {
 			...mapGetters({ 'releaseById': 'release' }),
 
 			release () {
 				return this.releaseById(this.$route.params.release)
+			}
+		},
 
-				return {
-				'title': 'Journey',
-				'image': '/images/release-1.png',
-				'releasedDate': '27th September, 2019',
-				'links': [
-					{
-						'name': "Spotify",
-						'url': 'https://open.spotify.com/artist/5xvyAXQfTzG95lXHos2ZDn',
-						'actionText': 'Listen on Spotify',
-						'icon': 'fa-spotify'
-					},
-					{
-						'name': "Apple Music",
-						'url': '#',
-						'actionText': 'Listen on Apple Music',
-						'icon': 'fa-apple'
-					},
-					{
-						'name': "Youtube",
-						'url': '#',
-						'actionText': 'Watch on Youtube',
-						'icon': 'fa-youtube'
-					},
-					{
-						'name': "Soundcloud",
-						'url': '#',
-						'actionText': 'Listen on Soundcloud',
-						'icon': 'fa-soundcloud'
-					},
-					{
-						'name': "iTunes",
-						'url': '#',
-						'actionText': 'Buy from iTunes',
-						'icon': 'fa-itunes'
-					},
-					{
-						'name': "Google Play",
-						'url': '#',
-						'actionText': 'Buy from Google Play',
-						'icon': 'fa-google-play'
-					},
-					{
-						'name': "Amazon",
-						'url': '#',
-						'actionText': 'Buy from Amazon.com',
-						'icon': 'fa-amazon'
-					}
-				],
-				'secondaryLinks': [
-					{
-						'name': "Deezer",
-						'url': '',
-					},
-					{
-						'name': "Tidal",
-						'url': '',
-					},
-					{
-						'name': "Pandora",
-						'url': '',
-					}
-				]
-				}
+		methods: {
+			closeDownloadDialog () {
+				this.showingDownloadDialog = false;
+				document.querySelector('body').classList.remove('modal-active');
+			},
+
+			showDownloadDialog () {
+				document.querySelector('body').classList.add('modal-active');
+				this.showingDownloadDialog = true;
 			}
 		}
 	};

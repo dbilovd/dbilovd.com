@@ -11,7 +11,7 @@
 				</h1>
 				<div class="hidden md:block">
 					<router-link to="/about" class="font-semibold ml-6">About</router-link>
-					<router-link to="/support" class="font-semibold ml-6">Support</router-link>
+					<router-link to="/freely-given" class="font-semibold ml-6">#FreelyGiven</router-link>
 				</div>
 
 				<div class="block md:hidden mt-2">
