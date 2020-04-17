@@ -88,7 +88,7 @@
 
 		data: () => ({
 			subscribe: {
-				destination: 'https://dbilovd.us4.list-manage.com/subscribe/post-json?u=d09bba37346feb884f1d288c3&amp;id=b82fd59c83',
+				destination: 'https://dbilovd.us4.list-manage.com/subscribe/post?u=d09bba37346feb884f1d288c3&amp;id=b82fd59c83',
 				firstName: '',
 				lastName: '',
 				email: ''
@@ -105,7 +105,9 @@
 				// downloadTab.focus();
 
 				let formElement = document.getElementById('subscription-form');
-				// formElement.submit();
+				formElement.submit();
+
+				return;
 				let formData = Object.fromEntries(
 					new FormData(formElement)
 				);
