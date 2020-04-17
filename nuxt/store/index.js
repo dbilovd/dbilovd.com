@@ -23,73 +23,6 @@ export const state = () => ({
 			],
 		},
 		{
-			'id': 'hft-my-satisfaction',
-			'type': 'single',
-			'albumId': 'hft',
-			'title': 'My Satisfaction',
-			'image': '/images/mysatisfaction.png',
-			'lyrics': 'https://genius.com/Dbilovd-anvil-lyrics',
-			'releasedDate': '17th April, 2020',
-			'links': [
-				/*
-				{
-					'name': "Spotify",
-					'url': 'https://open.spotify.com/track/6MsWjxpIUB18I1HBFiHeYX?si=n8mSdLjhRsC1SlQ-PT1vNQ',
-					'actionText': 'Listen on Spotify',
-					'icon': 'fa-spotify'
-				},
-				{
-					'name': "Apple Music",
-					'url': 'https://music.apple.com/gh/album/journey/1479884495?i=1479884496',
-					'actionText': 'Listen on Apple Music',
-					'icon': 'fa-apple'
-				},
-				{
-					'name': "Youtube",
-					'url': 'https://www.youtube.com/watch?v=1WmJ0qKjD8U',
-					'actionText': 'Watch on Youtube',
-					'icon': 'fa-youtube'
-				},
-				{
-					'name': "Soundcloud",
-					'url': 'https://soundcloud.com/dbilovd/journey',
-					'actionText': 'Listen on Soundcloud',
-					'icon': 'fa-soundcloud'
-				},
-				{
-					'name': "Google Play",
-					'url': '',
-					'actionText': 'Buy from Google Play',
-					'icon': 'fa-google-play'
-				},
-				{
-					'name': "Amazon",
-					'url': '',
-					'actionText': 'Buy from Amazon.com',
-					'icon': 'fa-amazon'
-				}
-				*/
-			],
-			'secondaryLinks': [
-				/*
-				{
-					'name': "Deezer",
-					'url': 'https://www.deezer.com/track/747467632',
-				},
-				{
-					'name': "Tidal",
-					'url': '',
-				},
-				{
-					'name': "Pandora",
-					'url': '',
-				}
-				*/
-			],
-			// 'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687502972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-			// 'downloadLink': 'https://www.dropbox.com/s/zqf2db83h5kbpm1/Journey.mp3?dl=0'
-		},
-		{
 			'id': 'hft-anvil',
 			'type': 'single',
 			'albumId': 'hft',
@@ -98,10 +31,9 @@ export const state = () => ({
 			'lyrics': 'https://genius.com/Dbilovd-anvil-lyrics',
 			'releasedDate': '17th April, 2020',
 			'links': [
-				/*
 				{
 					'name': "Spotify",
-					'url': 'https://open.spotify.com/track/6MsWjxpIUB18I1HBFiHeYX?si=n8mSdLjhRsC1SlQ-PT1vNQ',
+					'url': 'https://open.spotify.com/track/0TVnyGajMftOEC7YR7Srt2?si=-XPG7QMKTJmSmSGCEaSFyw',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
@@ -135,10 +67,8 @@ export const state = () => ({
 					'actionText': 'Buy from Amazon.com',
 					'icon': 'fa-amazon'
 				}
-				*/
 			],
 			'secondaryLinks': [
-				/*
 				{
 					'name': "Deezer",
 					'url': 'https://www.deezer.com/track/747467632',
@@ -151,10 +81,9 @@ export const state = () => ({
 					'name': "Pandora",
 					'url': '',
 				}
-				*/
 			],
-			// 'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687502972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-			// 'downloadLink': 'https://www.dropbox.com/s/zqf2db83h5kbpm1/Journey.mp3?dl=0'
+			'soundcloudEmbed': '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/800665378&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+			'downloadLink': 'https://www.dropbox.com/s/m3ry040s9pfgsv3/Anvil.mp3?dl=0'
 		},
 		{
 			'id': 'hft-journey',

@@ -104,10 +104,12 @@
 				// downloadTab.focus();
 
 				let formElement = document.getElementById('subscription-form');
-				// formElement.submit();
+				formElement.submit();
+				/*
 				let formData = Object.fromEntries(
 					new FormData(formElement)
 				);
+				debugger;
 				fetch(this.subscribe.destination, {
 						params: formData
 					})
@@ -117,6 +119,7 @@
 					.catch((err) => {
 						debugger;
 					});
+				*/
 
 
 			// // formData being an object with your form data like:

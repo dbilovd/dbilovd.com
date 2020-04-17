@@ -9,7 +9,6 @@
 							v-for="(social, socialIndex) in channels" :key="socialIndex"
 							v-if="social.url" :href="social.url"
 							:target="(social.url == '#' ? '' : `__blank_${social.name.toLowerCase()}`)">
-							<i :class="`fab ${social.icon} block text-lg`"></i>
 						</a>
 					</div>
 					<iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:5xvyAXQfTzG95lXHos2ZDn&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
