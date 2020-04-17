@@ -35,12 +35,11 @@ export default new Vuex.Store({
 				'title': 'Anvil',
 				'image': '/images/anvil.png',
 				'lyrics': 'https://genius.com/Dbilovd-anvil-lyrics',
-				'releasedDate': 'TBD',
+				'releasedDate': '17th April, 2020',
 				'links': [
-					/*
 					{
 						'name': "Spotify",
-						'url': 'https://open.spotify.com/track/6MsWjxpIUB18I1HBFiHeYX?si=n8mSdLjhRsC1SlQ-PT1vNQ',
+						'url': 'https://open.spotify.com/track/0TVnyGajMftOEC7YR7Srt2?si=-XPG7QMKTJmSmSGCEaSFyw',
 						'actionText': 'Listen on Spotify',
 						'icon': 'fa-spotify'
 					},
@@ -58,7 +57,7 @@ export default new Vuex.Store({
 					},
 					{
 						'name': "Soundcloud",
-						'url': 'https://soundcloud.com/dbilovd/journey',
+						'url': 'https://soundcloud.com/dbilovd/anvil',
 						'actionText': 'Listen on Soundcloud',
 						'icon': 'fa-soundcloud'
 					},
@@ -74,13 +73,11 @@ export default new Vuex.Store({
 						'actionText': 'Buy from Amazon.com',
 						'icon': 'fa-amazon'
 					}
-					*/
 				],
 				'secondaryLinks': [
-					/*
 					{
 						'name': "Deezer",
-						'url': 'https://www.deezer.com/track/747467632',
+						'url': 'https://www.deezer.com/track/140458592',
 					},
 					{
 						'name': "Tidal",
@@ -90,10 +87,9 @@ export default new Vuex.Store({
 						'name': "Pandora",
 						'url': '',
 					}
-					*/
 				],
-				// 'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687502972&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-				// 'downloadLink': 'https://www.dropbox.com/s/zqf2db83h5kbpm1/Journey.mp3?dl=0'
+				'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/800665378&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+				'downloadLink': 'https://www.dropbox.com/s/m3ry040s9pfgsv3/Anvil.mp3?dl=0'
 			},
 			{
 				'id': 'hft-journey',
