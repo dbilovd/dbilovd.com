@@ -26,13 +26,14 @@
 					</div>
 					<div class="w-full md:w-2/3 md:pl-6 text-lg">
 						<div class="w-full my-10 md:my-0 md:mb-20">
+							<div class="mb-10" v-if="release.youtubeEmbed" v-html="release.youtubeEmbed"></div>
 							<div v-html="release.soundcloudEmbed"></div>
 						</div>
 						<div class="w-full flex flex-col md:flex-row justify-between">
 							<div class="mt-6 md:mt-0 flex flex-col justify-start">
 								<a class="block"
-									v-for="(link, linkIndex) in release.links" :key="linkIndex" :href="link.url" 
-									v-if="link.url" :target="`__blank_${link.name}`">
+									v-for="(link, linkIndex) in release.links" :key="linkIndex"
+									v-if="link.url" :href="link.url" :target="`__blank_${link.name}`">
 									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i>
 									<span>{{ link.actionText }}</span>
 								</a>

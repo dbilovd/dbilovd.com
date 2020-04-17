@@ -45,13 +45,13 @@ export default new Vuex.Store({
 					},
 					{
 						'name': "Apple Music",
-						'url': 'https://music.apple.com/gh/album/journey/1479884495?i=1479884496',
+						'url': 'https://music.apple.com/gh/album/anvil-single/1506723206',
 						'actionText': 'Listen on Apple Music',
 						'icon': 'fa-apple'
 					},
 					{
 						'name': "Youtube",
-						'url': 'https://www.youtube.com/watch?v=1WmJ0qKjD8U',
+						'url': 'https://www.youtube.com/watch?v=gCaG3hZLFyg',
 						'actionText': 'Watch on Youtube',
 						'icon': 'fa-youtube'
 					},
@@ -89,6 +89,7 @@ export default new Vuex.Store({
 					}
 				],
 				'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/800665378&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+				'youtubeEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/gCaG3hZLFyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
 				'downloadLink': 'https://www.dropbox.com/s/m3ry040s9pfgsv3/Anvil.mp3?dl=0'
 			},
 			{
@@ -337,8 +338,10 @@ export default new Vuex.Store({
 						}
 					});
 				})
-				.catch((err) => {
-				});
+				// .catch((err) => {
+				// 	// console.error(err);
+				// })
+				;
 		}
 	},
 
