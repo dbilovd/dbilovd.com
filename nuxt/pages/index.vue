@@ -115,8 +115,14 @@
       }),
     },
 
+    head() {
+      return {
+        title: "Home | Dbilovd"
+      }
+    },
+
     methods: {
-      ...mapActions([ 'fetchPosts' ])
+      ...mapActions([ 'fetchPosts' ]),
     }
   };
 

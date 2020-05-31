@@ -90,6 +90,12 @@
 			}
 		},
 
+		head() {
+			return {
+				title: `${this.release.title} | Dbilovd`
+			}
+		},
+
 		methods: {
 			closeDownloadDialog () {
 				this.showingDownloadDialog = false;
@@ -99,7 +105,7 @@
 			showDownloadDialog () {
 				document.querySelector('body').classList.add('modal-active');
 				this.showingDownloadDialog = true;
-			}
+			},
 		}
 	};
 

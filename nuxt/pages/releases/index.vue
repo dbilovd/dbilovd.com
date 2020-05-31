@@ -16,7 +16,8 @@
 					<span class="block">There is new music coming soon...</span>
 				</h3>
 				<div class="flex flex-col justify-start">
-					<div class="flex flex-col md:flex-row justify-start" v-for="album in albums">
+					<div class="flex flex-col md:flex-row justify-start"
+						v-for="(album, albumIndex) in albums" :key="albumIndex">
 						<div class="w-full md:w-1/3">
 							<div class="border shadow rounded w-full overflow-hidden h-64">
 								<img :src="album.image" :alt="album.title" class="w-full h-full object-cover object-center">
@@ -33,6 +34,7 @@
 								<div class="my-8">
 									Songs: 
 									<nuxt-link v-for="(single, singleId) in getAlbumSingles(album.id)" 
+										:key="singleId"
 										:to="`/releases/singles/${single.id}`"
 										class="border-b border-gray-400 mr-4 font-semibold">
 										{{ single.title }}
@@ -76,7 +78,7 @@
 	'use strict';
 
 	import { mapGetters } from 'vuex';
-  	import SingleRelease from '~/components/SingleRelease';
+  import SingleRelease from '~/components/SingleRelease';
 
 	const Releases = {
 		components: {
@@ -93,10 +95,16 @@
 			})
 		},
 
+		head() {
+			return {
+				title: 'Music | Dbilovd'
+			}
+		},
+
 		methods: {
 			getAlbumSingles (id) {
 				return this.albumSingles(id);
-			}
+			},
 		}
 	};
 

@@ -24,6 +24,12 @@
 	export default {
 		computed: {
 			...mapGetters([ 'descriptionLines' ])
+		},
+
+		head() {
+			return {
+				title: "About | Dbilovd"
+			}
 		}
 	}
 </script>

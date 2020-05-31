@@ -31,6 +31,12 @@
 			}
 		},
 
+		head() {
+			return {
+				title: `Update: ${this.update.title} | Dbilovd`
+			}
+		},
+
 		methods: {
 			...mapActions([ 'fetchPosts' ]),
 

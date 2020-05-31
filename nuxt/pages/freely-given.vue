@@ -33,6 +33,12 @@
 			...mapGetters({
 				'descriptionLines': 'supportDescriptionLines'
 			})
+		},
+
+		head() {
+			return {
+				title: "#FreelyGiven | Dbilovd"
+			}
 		}
 	};
 
