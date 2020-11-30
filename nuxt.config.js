@@ -52,6 +52,11 @@ module.exports = {
     }
   },
   generate: {
-    fallback: true
+    routes: [
+      'releases/singles/hft-be-my-satisfaction',
+      'releases/singles/hft-anvil',
+      'releases/singles/hft-journey',
+      'releases/singles/hft-my-all',
+    ]
   }
 }
