@@ -23,6 +23,69 @@ export const state = () => ({
 			],
 		},
 		{
+			'id': 'little-songwriter-boy',
+			'type': 'single',
+			'albumId': '',
+			'title': 'Little Songwriter Boy',
+			'image': '/images/little-songwriter-body.png',
+			'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+			'releasedDate': '22nd December, 2022',
+			'links': [
+				{
+					'name': "Youtube",
+					'url': 'https://www.youtube.com/watch?v=aN212TRCruc',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				},
+				{
+					'name': "Spotify",
+					'url': 'https://share.amuse.io/track/dbilovd-little-songwriter-boy',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://share.amuse.io/track/dbilovd-little-songwriter-boy',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+				/*
+				, 
+				{
+					'name': "Google Play",
+					'url': '',
+					'actionText': 'Buy from Google Play',
+					'icon': 'fa-google-play'
+				},
+				{
+					'name': "Amazon",
+					'url': '',
+					'actionText': 'Buy from Amazon.com',
+					'icon': 'fa-amazon'
+				}
+				*/
+			],
+			'secondaryLinks': [
+				/*
+				{
+					'name': "Deezer",
+					'url': 'https://www.deezer.com/track/140458592',
+				},
+				{
+					'name': "Tidal",
+					'url': '',
+				},
+				{
+					'name': "Pandora",
+					'url': '',
+				}
+				*/
+			],
+			// 'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/800665378&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+			// 'youtubeEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/gCaG3hZLFyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+			// 'downloadLink': ''
+		},
+		{
 			'id': 'hft-be-my-satisfaction',
 			'type': 'single',
 			'albumId': 'hft',

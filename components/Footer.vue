@@ -11,7 +11,7 @@
 							:target="(social.url == '#' ? '' : `__blank_${social.name.toLowerCase()}`)">
 						</a>
 					</div>
-					<iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:5xvyAXQfTzG95lXHos2ZDn&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+					<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/5xvyAXQfTzG95lXHos2ZDn?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 					<h3 class="mt-10 text-center md:text-left">&copy; Copyright Dbilovd {{ year }}</h3>
 				</div>
 				<div class="w-full md:w-3/5 order-first md:order-last mb-10 md:mb-0 md:pl-10">

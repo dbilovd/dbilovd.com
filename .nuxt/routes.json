@@ -1,0 +1,44 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "freely-given",
+    "path": "/freely-given",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/freely-given.vue",
+    "chunkName": "pages/freely-given"
+  },
+  {
+    "name": "releases",
+    "path": "/releases",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/releases/index.vue",
+    "chunkName": "pages/releases/index"
+  },
+  {
+    "name": "updates",
+    "path": "/updates",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/updates/index.vue",
+    "chunkName": "pages/updates/index"
+  },
+  {
+    "name": "releases-singles-release",
+    "path": "/releases/singles/:release?",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/releases/singles/_release.vue",
+    "chunkName": "pages/releases/singles/_release"
+  },
+  {
+    "name": "updates-slug",
+    "path": "/updates/:slug",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/updates/_slug.vue",
+    "chunkName": "pages/updates/_slug"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/dbilovd/Dev/Projects/Dbilovd/Music/dbilovd.com/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="bg-white py-20 px-10">
+    <!-- <div class="bg-white py-20 px-10">
       <div class="max-w-4xl mx-auto">
         <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-10">
           <h3 class="uppercase font-semibold text-xl">Latest Updates</h3>
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="bg-gray-100 py-20 px-10">
       <div class="max-w-4xl mx-auto">
@@ -103,7 +103,7 @@
     data: () => ({}),
 
     created () {
-      this.fetchPosts();
+      // this.fetchPosts();
     },
 
     computed: {
