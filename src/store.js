@@ -28,6 +28,7 @@ export default new Vuex.Store({
 					},
 				],
 			},
+			
 			{
 				'id': 'little-songwriter-boy',
 				'type': 'single',

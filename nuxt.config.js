@@ -1,5 +1,5 @@
 
-module.exports = {
+export default defineNuxtConfig({
   mode: 'universal',
   /*
   ** Headers of the page
@@ -23,6 +23,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/css/tailwind.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -33,13 +34,13 @@ module.exports = {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/tailwindcss',
   ],
   /*
   ** Build configuration
@@ -49,7 +50,15 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+    },
   },
   generate: {
     routes: [
@@ -59,4 +68,4 @@ module.exports = {
       'releases/singles/hft-my-all',
     ]
   }
-}
+})
