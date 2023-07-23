@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-800 text-gray-200">
     <div class="max-w-4xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between py-20">
+      <div class="flex flex-col md:flex-row justify-between py-20 px-10 md:px-0">
         <div class="w-full md:w-2/5 order-last md:order-first">
           <h1 class="mb-2 font-semibold">Let's Connect</h1>
           <div

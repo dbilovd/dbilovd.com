@@ -116,11 +116,13 @@
               :href="channel.url"
               :target="channel.url == '#' ? '' : `__blank_${channel.name}`"
             >
-              <font-awesome-icon
-                :icon="['fab', channel.icon]"
-                class="block text-3xl"
-              />
-              <span class="hidden md:block mt-2">{{ channel.name }}</span>
+              <span>
+                <font-awesome-icon
+                  :icon="['fab', channel.icon]"
+                  class="block text-3xl"
+                />
+                <span class="hidden md:block mt-2">{{ channel.name }}</span>
+              </span>
             </a>
           </div>
           <div class="">
