@@ -23,7 +23,7 @@
       </nav>
     </div>
 
-    <nuxt />
+    <slot/>
 
     <FooterComponent></FooterComponent>
   </div>

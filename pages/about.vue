@@ -9,7 +9,7 @@
 					<p class="font-semibold italic text-xl mb-10">
 						"God is most glorified in us when we are most satisfied in him." <span>~ John Piper</span>
 					</p>
-					<p class="mb-2" v-for="line in descriptionLines">{{ line }}</p>
+					<p class="mb-2" v-for="(line, lineIndex) in descriptionLines" :key="lineIndex">{{ line }}</p>
 				</div>
 			</div>
 		</div>
