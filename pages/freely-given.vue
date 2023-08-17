@@ -1,5 +1,9 @@
 <template>
 	<div class="home bg-gray-100">
+		<Head>
+			<Title>#FreelyGiven - Dbilovd</Title>
+		</Head>
+
 		<div class="bg-gray-100 py-12 max-w-2xl mx-auto text-center">
 			<p class="font-semibold italic text-xl mt-10 mb-4 p-6 text-lg">
 				"... Give as freely as you have received!" <span>~ Matthew 10:8</span>

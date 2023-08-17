@@ -1,5 +1,8 @@
 <template>
-  	<div class="bg-gray-100">
+  <div class="bg-gray-100">
+		<Head>
+			<Title>About David - Dbilovd</Title>
+		</Head>
 		<div class="bg-gray-100 py-20 px-10">
 			<div class="max-w-4xl mx-auto flex flex-col md:flex-row md:justify-between items-center md:items-start">
 				<div class="w-full md:w-1/3">
@@ -13,7 +16,7 @@
 				</div>
 			</div>
 		</div>
-  	</div>
+  </div>
 </template>
 
 <script type="text/javascript">

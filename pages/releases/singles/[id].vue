@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<Head>
+			<Title>{{ release.title }} - Dbilovd</Title>
+		</Head>
 		<DownloadDialog :download-link="release.downloadLink"
 			:showing-dialog="showingDownloadDialog"
 			v-on:close-dialog="closeDownloadDialog"
@@ -32,9 +35,13 @@
 						<div class="w-full flex flex-col md:flex-row justify-between">
 							<div class="mt-6 md:mt-0 flex flex-col justify-start">
 								<a class="block"
-									v-for="(link, linkIndex) in release.links" :key="linkIndex"
-									v-if="link && link.url" :href="link.url" :target="`__blank_${link.name}`">
-									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i>
+									v-for="(link, linkIndex) in links" :key="linkIndex"
+									:href="link.url" :target="`__blank_${link.name}`">
+									<!-- <i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i> -->
+									<font-awesome-icon
+										:icon="['fab', link.icon]"
+										class="inline-block text-xl mr-2"
+									/>
 									<span>{{ link.actionText }}</span>
 								</a>
 								<div class="mt-2" v-if="release.secondaryLinks.length > 0">
@@ -42,8 +49,8 @@
 										More:
 									</h5>
 									<a class="inline-block mr-1 underline"
-										v-for="(link, linkIndex) in release.secondaryLinks" :key="linkIndex" :href="link.url"
-										v-if="link.url" :target="`__blank_${link.name}`">
+										v-for="(link, linkIndex) in secondaryLinks" :key="linkIndex" :href="link.url"
+										 :target="`__blank_${link.name}`">
 										<span>{{ link.name }}</span>
 										<span v-show="linkIndex < (release.secondaryLinks.length - 1)">,</span>
 									</a>
@@ -57,7 +64,7 @@
 										viewBox="0 0 20 20">
 										<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
 									</svg>
-									<span class="">Download for Free</span>
+									<span class="">Free Download</span>
 								</a>
 							</div>
 						</div>
@@ -88,7 +95,15 @@
 
 			release () {
 				return this.releaseById(this.$route.params.id)
-			}
+			},
+
+			links() {
+				return this.release.links.filter(link => !!link.url)
+			},
+
+			secondaryLinks() {
+				return this.release.secondaryLinks.filter(link => !!link.url)
+			},
 		},
 
 		head() {

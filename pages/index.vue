@@ -17,7 +17,7 @@
             "God is most glorified in us when we are most satisfied in him."
             <span>~ John Piper</span>
           </p>
-          <p class="mb-2" v-for="line in descriptionLines">{{ line }}</p>
+          <p class="mb-2" v-for="(line, lineIndex) in descriptionLines" :key="lineIndex">{{ line }}</p>
         </div>
       </div>
     </div>
@@ -128,7 +128,7 @@
           <div class="">
             <nuxt-link
               to="/releases"
-              class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold font-bold py-2 px-3 border border-gray-900 rounded shadow rounded text-center"
+              class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold py-2 px-3 border border-gray-900 rounded shadow text-center"
             >
               <svg
                 class="fill-current w-4 h-4 mr-4 inline-block"

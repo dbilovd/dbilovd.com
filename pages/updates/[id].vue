@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<Head>
+			<Title>{{ update.title }} - Dbilovd</Title>
+		</Head>
 		<div class="bg-gray-100 pt-10 pb-20 px-10">
 			<div class="max-w-2xl mx-auto p-6">
 				<h1 class="font-semibold text-2xl mt-10 capitalize">{{ update.title }}</h1>
