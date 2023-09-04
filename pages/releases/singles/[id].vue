@@ -10,11 +10,11 @@
 		<div class="bg-gray-100 pt-10 pb-20 px-10">
 			<div class="max-w-4xl mx-auto">
 				<div class="flex flex-col md:flex-row justify-between items-top">
-					<h3 class="w-full md:w-1/2 uppercase font-semibold text-2xl">
+					<h3 class="w-full md:w-4/5 uppercase font-semibold text-2xl">
 						<span class="block">{{ release.title }}</span>
 						<span class="block text-gray-600 text-sm">{{ release.releasedDate }}</span>
 					</h3>
-					<h4 class="w-full md:w-1/2 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600"
+					<h4 class="w-full md:w-1/5 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600"
 						v-if="release.lyrics">
 						<a :href="release.lyrics" class="uppercase tracking-wide">
 							<i class="fas fa-external-link-alt fa-lite text-xs mr-2"></i>
@@ -30,7 +30,7 @@
 					<div class="w-full md:w-2/3 md:pl-6 text-lg">
 						<div class="w-full my-10 md:my-0 md:mb-20">
 							<div class="mb-10" v-if="release.youtubeEmbed" v-html="release.youtubeEmbed"></div>
-							<div v-html="release.soundcloudEmbed"></div>
+							<div v-if="release.soundcloudEmbed" v-html="release.soundcloudEmbed"></div>
 						</div>
 						<div class="w-full flex flex-col md:flex-row justify-between">
 							<div class="mt-6 md:mt-0 flex flex-col justify-start">
