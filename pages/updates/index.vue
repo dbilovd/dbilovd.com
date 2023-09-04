@@ -1,5 +1,9 @@
 <template>
   <div class="home bg-gray-100">
+		<Head>
+			<Title>Updates from Dbilovd</Title>
+		</Head>
+
 		<div class="bg-gray-100 py-12 max-w-2xl mx-auto text-center">
 			<p class="font-semibold italic text-xl my-10 p-6 text-lg">
 				"God is most glorified in us when we are most satisfied in him." <span>~ John Piper</span>

@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<Head>
+			<Title>{{ release.title }} - Dbilovd</Title>
+		</Head>
 		<DownloadDialog :download-link="release.downloadLink"
 			:showing-dialog="showingDownloadDialog"
 			v-on:close-dialog="closeDownloadDialog"
@@ -7,11 +10,11 @@
 		<div class="bg-gray-100 pt-10 pb-20 px-10">
 			<div class="max-w-4xl mx-auto">
 				<div class="flex flex-col md:flex-row justify-between items-top">
-					<h3 class="w-full md:w-1/2 uppercase font-semibold text-2xl">
+					<h3 class="w-full md:w-4/5 uppercase font-semibold text-2xl">
 						<span class="block">{{ release.title }}</span>
 						<span class="block text-gray-600 text-sm">{{ release.releasedDate }}</span>
 					</h3>
-					<h4 class="w-full md:w-1/2 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600"
+					<h4 class="w-full md:w-1/5 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600"
 						v-if="release.lyrics">
 						<a :href="release.lyrics" class="uppercase tracking-wide">
 							<i class="fas fa-external-link-alt fa-lite text-xs mr-2"></i>
@@ -27,14 +30,18 @@
 					<div class="w-full md:w-2/3 md:pl-6 text-lg">
 						<div class="w-full my-10 md:my-0 md:mb-20">
 							<div class="mb-10" v-if="release.youtubeEmbed" v-html="release.youtubeEmbed"></div>
-							<div v-html="release.soundcloudEmbed"></div>
+							<div v-if="release.soundcloudEmbed" v-html="release.soundcloudEmbed"></div>
 						</div>
 						<div class="w-full flex flex-col md:flex-row justify-between">
 							<div class="mt-6 md:mt-0 flex flex-col justify-start">
 								<a class="block"
-									v-for="(link, linkIndex) in release.links" :key="linkIndex"
-									v-if="link && link.url" :href="link.url" :target="`__blank_${link.name}`">
-									<i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i>
+									v-for="(link, linkIndex) in links" :key="linkIndex"
+									:href="link.url" :target="`__blank_${link.name}`">
+									<!-- <i :class="`fab ${link.icon} inline-block text-xl mr-2 mb-4`"></i> -->
+									<font-awesome-icon
+										:icon="['fab', link.icon]"
+										class="inline-block text-xl mr-2"
+									/>
 									<span>{{ link.actionText }}</span>
 								</a>
 								<div class="mt-2" v-if="release.secondaryLinks.length > 0">
@@ -42,8 +49,8 @@
 										More:
 									</h5>
 									<a class="inline-block mr-1 underline"
-										v-for="(link, linkIndex) in release.secondaryLinks" :key="linkIndex" :href="link.url"
-										v-if="link.url" :target="`__blank_${link.name}`">
+										v-for="(link, linkIndex) in secondaryLinks" :key="linkIndex" :href="link.url"
+										 :target="`__blank_${link.name}`">
 										<span>{{ link.name }}</span>
 										<span v-show="linkIndex < (release.secondaryLinks.length - 1)">,</span>
 									</a>
@@ -57,7 +64,7 @@
 										viewBox="0 0 20 20">
 										<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
 									</svg>
-									<span class="">Download for Free</span>
+									<span class="">Free Download</span>
 								</a>
 							</div>
 						</div>
@@ -88,7 +95,15 @@
 
 			release () {
 				return this.releaseById(this.$route.params.id)
-			}
+			},
+
+			links() {
+				return this.release.links.filter(link => !!link.url)
+			},
+
+			secondaryLinks() {
+				return this.release.secondaryLinks.filter(link => !!link.url)
+			},
 		},
 
 		head() {

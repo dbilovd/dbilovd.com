@@ -1,11 +1,23 @@
 export const state = () => ({
 	releases: [
 		{
+			'id': 'project-changes',
+			'type': 'album',
+			'title': 'Changes',
+			'image': '/images/changes/changes-ep.jpg',
+			'releasedDate': 'Sept to Nov, 2023',
+			'completed': false,
+			'description': "Life and it's changes",
+			'links': [
+			],
+		},
+		{
 			'id': 'hft',
 			'type': 'album',
 			'title': 'Hymns for Tomorrow',
 			'image': '/images/hft.png',
 			'releasedDate': 'Sept, 2019',
+			'completed': true,
 			'description': "I'm putting together about 6 to 8 songs that has greatly helped me this past few months",
 			'links': [
 				{
@@ -21,6 +33,66 @@ export const state = () => ({
 					'icon': 'fa-soundcloud'
 				},
 			],
+		},
+		// {
+		// 	'id': 'thou-who-changest-not',
+		// 	'type': 'single',
+		// 	'albumId': 'project-changes',
+		// 	'albumOrder': 5,
+		// 	'title': "Oh Thou Who Changest Not",
+		// 	'image': '/images/changes/oh-thou-who-changest-not.jpg',
+		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+		// 	'releasedDate': '10th November, 2023',
+		// 	'links': [],
+		// 	'secondaryLinks': [],
+		// },
+		// {
+		// 	'id': 'changes',
+		// 	'type': 'single',
+		// 	'albumId': 'project-changes',
+		// 	'albumOrder': 3,
+		// 	'title': "Changes",
+		// 	'image': '/images/changes/changes.jpg',
+		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+		// 	'releasedDate': '20th October, 2023',
+		// 	'links': [],
+		// 	'secondaryLinks': [],
+		// },
+		// {
+		// 	'id': 'pictured-differently',
+		// 	'type': 'single',
+		// 	'albumId': 'project-changes',
+		// 	'albumOrder': 2,
+		// 	'title': "Pictured Differently",
+		// 	'image': '/images/changes/pictured-differently.jpg',
+		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+		// 	'releasedDate': '29th September, 2023',
+		// 	'links': [],
+		// 	'secondaryLinks': [],
+		// },
+		// {
+		// 	'id': 'dreamer-song-band',
+		// 	'type': 'single',
+		// 	'albumId': 'project-changes',
+		// 	'albumOrder': 4,
+		// 	'title': "A Dreamer's Song (Working for Good) - Band Version",
+		// 	'image': '/images/changes/dreamers-song-band.jpg',
+		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+		// 	'releasedDate': '8th September, 2023',
+		// 	'links': [],
+		// 	'secondaryLinks': [],
+		// },
+		{
+			'id': 'dreamer-song',
+			'type': 'single',
+			'albumId': 'project-changes',
+			'albumOrder': 1,
+			'title': "A Dreamer's Song (Working for Good)",
+			'image': '/images/changes/dreamers-song.jpg',
+			'lyrics': false, // 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+			'releasedDate': '22nd September, 2023',
+			'links': [],
+			'secondaryLinks': [],
 		},
 		{
 			'id': 'little-songwriter-boy',
@@ -427,7 +499,7 @@ export const getters = {
 	albumSingles: (state)  => (albumId) => {
 		return state.releases.filter(
 			(release) => release.type == 'single' && release.albumId == albumId
-		)
+		).sort((first, second) => first.albumOrder - second.albumOrder)
 	},
 	release: (state) => (id) => {
 		return state.releases.find((release) => release.id == id)
