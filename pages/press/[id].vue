@@ -1,244 +1,59 @@
 <template>
   <div class="bg-gray-100">
-
     <Head>
-      <Title>A Dreamer's Song - Song Press Kit - Dbilovd</Title>
+      <Title>{{ release.title }} - Song Press Kit - Dbilovd</Title>
     </Head>
     <div class="bg-gray-100 py-20 px-10">
       <div class="max-w-4xl mx-auto">
         <div class="w-full">
           <h1 class="font-bold text-3xl mb-6 text-center">
-            "A Dreamer's Song" a new single by D'bilovd
+            "{{ release.title }}" an upcoming {{ release.type }} by D'bilovd
           </h1>
+          <h3 class="text-lg mt-20 text-center">📆 Release Date</h3>
           <h1 class="font-bold text-3xl mb-6 text-center">
-            22nd September 2023
+            {{ release.releasedDate }}
           </h1>
 
-          <div class="w-full mt-20 text-center md:text-left">
-            <!-- <h1 class="font-bold text-xl mb-6">
-              About the song
-            </h1> -->
-            <p class="mb-4">This song is about perseverance and keeping faith in the midst of life's changes (positive or negative), because, God is in control over the lives of His children. It is a piano ballad with a backing saxophone to create a beautifully calm sound.</p>
+          <div class="flex flex-col md:flex-row md:justify-between items-center md:items-start space-x-4 mt-20">
+            <div class="w-full md:w-2/5 text-center md:text-left">
+              <img
+                  :src="release.image"
+                  class="w-full h-full object-cover object-center rounded-md"
+                >
+            </div>
+            <div class="w-full md:w-3/5 text-center md:text-left">
+              <h1 class="font-bold text-xl mb-6 mt-6 md:mt-0">
+                About the song
+              </h1>
+              <p
+                class="mb-4"
+                v-for="(about, abtIndex) in release.press?.about"
+                :key="abtIndex"
+              >
+                {{ about }}
+              </p>
+            </div>
           </div>
 
           <h3 class="font-bold text-xl mb-6 mt-20 text-center">
-            Listen to "A Dreamer's Song" before it is released.
+            Listen to "{{ release.title }}" before it is released.
           </h3>
-          <div>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1607480214%3Fsecret_token%3Ds-vn4GYgk6fLh&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-            <div style="
-                font-size: 10px;
-                color: #cccccc;
-                line-break: anywhere;
-                word-break: normal;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-                font-weight: 100;
-              ">
-              <a href="https://soundcloud.com/dbilovd" title="Dbilovd" target="_blank"
-                style="color: #cccccc; text-decoration: none">Dbilovd</a>
-              ·
-              <a href="https://soundcloud.com/dbilovd/dbilovd-a-dreamers-song-1/s-vn4GYgk6fLh"
-                title="D&#x27;bilovd - A Dreamer&#x27;s Song (Working for Good)" target="_blank"
-                style="color: #cccccc; text-decoration: none">D&#x27;bilovd - A Dreamer&#x27;s Song (Working for Good)</a>
-            </div>
-          </div>
-
-          <!-- 
-          <component :is="'script'" type="application/javascript" defer src="https://f.convertkit.com/ckjs/ck.5.js">
-          </component>
-          <form action="https://app.convertkit.com/forms/5563256/subscriptions" class="seva-form formkit-form"
-            method="post" data-sv-form="5563256" data-uid="9b159ef921" data-format="inline" data-version="5"
-            data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
-            min-width="400 500 600 700 800" style="margin: auto; border: none;">
-            <div class="formkit-background" style="opacity: 0.2"></div>
-            <input class="formkit-input" name="tag" type="hidden" value="Press"  />
-            <div data-style="minimal">
-              <div class="formkit-header" data-element="header" style="
-                  color: rgb(77, 77, 77);
-                  font-size: 27px;
-                  font-weight: 700;
-                ">
-                <h2 class="text-xl font-bold" style="font-size: ;">Sign-Up for Press Notifications</h2>
-              </div>
-              <div class="formkit-subheader" data-element="subheader" style="color: rgb(104, 104, 104); font-size: 18px">
-                <p>
-                  We will <em><strong>not</strong></em> send you marketing
-                  emails, only press releases.
-                </p>
-              </div>
-              <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-              <div data-element="fields" data-stacked="true" class="seva-fields formkit-fields">
-                <div class="formkit-field">
-                  <input class="formkit-input" aria-label="First Name" name="fields[first_name]" required=""
-                    placeholder="First Name" type="text" style="
-                      color: rgb(0, 0, 0);
-                      border-color: rgb(227, 227, 227);
-                      border-radius: 4px;
-                      font-weight: 400;
-                    " />
-                </div>
-                <div class="formkit-field">
-                  <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address"
-                    required="" type="email" style="
-                      color: rgb(0, 0, 0);
-                      border-color: rgb(227, 227, 227);
-                      border-radius: 4px;
-                      font-weight: 400;
-                    " />
-                </div>
-                <button data-element="submit" class="formkit-submit formkit-submit" style="
-                    color: rgb(255, 255, 255);
-                    background-color: rgb(22, 119, 190);
-                    border-radius: 4px;
-                    font-weight: 400;
-                  ">
-                  <div class="formkit-spinner">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                  <span class="">Yes, send me industry-only notifications</span>
-                </button>
-              </div>
-              <div class="formkit-guarantee" data-element="guarantee" style="
-                  color: rgb(77, 77, 77);
-                  font-size: 13px;
-                  font-weight: 400;
-                ">
-                <p>We won't send you spam. Unsubscribe at any time.</p>
-              </div>
-            </div>
-          </form> -->
+          
+          <div v-if="release.press?.embed" v-html="release.press?.embed"></div>          
         </div>
 
         <div class="w-full mt-20 text-center">
           <h1 class="font-bold text-xl mb-6">
             Lyrics
           </h1>
-          <p class="mb-6">
-            I've had dreams,<br />
-            Fantasies<br />
-            Many things I thought that I will be<br />
-            But here I am<br />
-            A different man with different plans<br />
-            New hopes for what can be<br />
-            Then steps in the could-have-beens<br />
-            Whispering to me: “I'm not where I should be”<br />
-            Yet in the midst of these doubts<br />
-            This one thing keeps me going,<br />
-            Knowing
-          </p>
-          <p class="mb-6">
-            I'm not my own<br />
-            I belong to Him who is in control<br />
-            This one thing I know <br />
-            And unto which I hold<br />
-            That all of life plays this one role<br />
-            Working working for my good<br />
-            Working working for my good<br />
-          </p>
-          <p class="mb-6">
-            I still dream<br />
-            I'm praying and planning<br />
-            Working to change things<br />
-            I do my best<br />
-            Then do some more<br />
-            Yet I find rest in the purpose of my Lord<br />
-            For except the Lord does a thing<br />
-            And fulfils a dream<br />
-            The dreamer dreams in vain<br />
-            So I won't worry about tomorrow<br />
-            For Jesus says I shouldn't because<br />
-          </p>
-          <p class="mb-6">
-            I'm not my own<br />
-            I am a child of God<br />
-            And God is in control<br />
-            And this one thing I know<br />
-            And unto which I hold<br />
-            That all of life plays this one role<br />
-            Working, working for my good<br />
-            Working, working for my good<br />
-          </p>
-          <p class="mb-6">
-            I don't know who I'll become<br />
-            Or what tomorrow has for me<br />
-            Broken dreams or fulfilled ones<br />
-            Better than what I imagined<br />
-            But no matter what comes<br />
-            No matter what doesn't<br />
-            My faith will stay strong<br />
-            For I have found my place in Him<br />
-          </p>
-          <p class="mb-6">
-            I'm no longer my own<br />
-            I belong to God<br />
-            And God is in control<br />
-            And this one thing I know <br />
-            And unto which I hold<br />
-            That all of life plays this one role<br />
-            Working, working for my good<br />
-            Working, working for my good<br />
-          </p>
-          <p class="mb-6">
-            It's all working, <br />
-            It's all working for my good<br />
-            Working, working for my good<br />
-            They're all working, <br />
-            They're all working, working for my good<br />
-            Yes, they're all working, <br />
-            They're all working, working for my good<br />
-            The highs are working<br />
-            The lows are working<br />
-            Working for my good<br />
-            The ebbs are working<br />
-            The flows are working<br />
-            Working for my good<br />
-            Working, working for my good<br />
-            It's all working for my good<br />
-          </p>
-
+          <p class="mb-6"
+            v-for="(lyric, lyIndex) in release.press?.lyrics"
+            :key="lyIndex"
+            v-html="lyric"
+          ></p>
         </div>
 
-        <div class="w-full mt-20 text-center md:text-left">
-          <h1 class="font-bold text-xl mb-6">
-            D'bilovd - Musical Artist Press Kit
-          </h1>
-          <p class="mb-4">D'bilovd (The Beloved), is the stage name for David Lartey, a Ghanaian gospel singer-songwriter.
-            From a place of fellowship with God and he writes music with lyrics deeply rooted in theology. Despite his
-            human imperfections and failures, David's love for God shines through in his music. For him, songwriting
-            serves as a means to bear witness to God's enduring love and faithfulness in his life. Each song he crafts
-            emerges from a sincere and personal experience of God, weaving the gospel's timeless truth with carefully
-            constructed narratives of his own journey. David is acutely aware that while his story is significant, it is
-            not the gospel itself; rather, it serves as a vessel to convey the gospel's profound truth.</p>
-          <p class="mb-4">His musical style and songwriting are heavily influenced by the Bible and the creative works of
-            revered artists such as Nathaniel Bassey, Esther Smith, Brandon Heath, and Switchfoot, among others.</p>
-          <p class="mb-4">David has already released five singles to date, and he prepares to unveil his debut EP,
-            "Changes" scheduled for release in November 2023. This EP represents his first full-bodied project, telling a
-            deeply personal season of change he went through. It promises to be a remarkable milestone in his musical
-            journey.</p>
-        </div>
-
-        <div class="grid grid-cols-2 items-center md:items-start mt-20">
-          <div class="w-full">
-            <img src="/images/press/5.jpg" alt="David"
-              class="w-full h-auto object-cover object-center rounded shadow-lg" />
-          </div>
-          <div
-            class="w-full h-full mt-10 md:mt-0 pl-0 md:pl-8 text-lg text-center md:text-left flex flex-col justify-center align-middle">
-            <h3 class="font-bold text-3xl mb-10">
-              David is an independent and self-managed artist.
-            </h3>
-            <h4 class="font-bold text-lg mb-1">Contact David</h4>
-            <p>dbilovd.music@gmail.com</p>
-            <p>+233547051251</p>
-          </div>
-        </div>
+        <PressMusicBrief />
       </div>
     </div>
   </div>
@@ -248,8 +63,13 @@
 "use strict";
 
 import { mapGetters } from "vuex";
+import PressMusicBrief from "@/components/PressMusicBrief";
 
 export default {
+  components: {
+    PressMusicBrief,
+  },
+
   data() {
     return {
       videos: [
@@ -287,13 +107,22 @@ export default {
 
   computed: {
     ...mapGetters(["descriptionLines"]),
+    ...mapGetters({ 'releaseById': 'release' }),
+
+    release () {
+      return this.releaseById(this.$route.params.id)
+    },
+
+    press() {
+      return this.release.pressKit
+    },
   },
 
   head() {
-    return {
-      title: "About | Dbilovd",
-    };
-  },
+			return {
+				title: `${this.release.title} Press Kit | Dbilovd`
+			}
+		},
 };
 </script>
 

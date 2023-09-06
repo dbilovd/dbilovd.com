@@ -291,6 +291,11 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
+"@chenfengyuan/vue-countdown@2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@chenfengyuan/vue-countdown/-/vue-countdown-2.1.2.tgz#108d96b271e8db463604b6eedbefa83f2b668487"
+  integrity sha512-/XDKIQzDDBc+4hXb681B1+ySKrStCTZONspRp+TojMcMe1edpCpuk4E/QoNVYxyZ24d+pcwN1YqnfIDgc7haBA==
+
 "@cloudflare/kv-asset-handler@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmjs.org/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.3.0.tgz"
@@ -5987,6 +5992,11 @@ vue@^3.3.4:
     "@vue/runtime-dom" "3.3.4"
     "@vue/server-renderer" "3.3.4"
     "@vue/shared" "3.3.4"
+
+vuejs-countdown@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vuejs-countdown/-/vuejs-countdown-0.2.1.tgz#184fc578356cba88f7b5356881ea7e123e5bf259"
+  integrity sha512-X0zirdW1Go+nhMis93sJz2fi3b82XEG3PmmlK9VnvmtQEHk8YcjuY8wOIxhzkD95h7sadK43sxbaVXRbpSmEpQ==
 
 vuex@^4.1.0:
   version "4.1.0"

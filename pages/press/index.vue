@@ -54,19 +54,9 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2 items-center md:items-start mt-20">
-          <div class="w-full">
-            <img src="/images/press/5.jpg" alt="David" class="w-full h-auto object-cover object-center rounded shadow-lg">
-          </div>
-          <div class="w-full h-full mt-10 md:mt-0 pl-0 md:pl-8 text-lg text-center md:text-left flex flex-col justify-center align-middle">
-            <h3 class="font-bold text-3xl mb-10">
-              David is an independent and self-managed artist.
-            </h3>
-            <h4 class="font-bold text-lg mb-1">Contact David</h4>
-            <p>dbilovd.music@gmail.com</p>
-            <p>+233547051251</p>
-          </div>
-        </div>
+        <PressMusicBrief
+          :show-about="false"
+        />
       </div>
     </div>
   </div>
@@ -86,28 +76,28 @@ export default {
       ],
       pressImages: [
         {
-          'thumbnail': 'images/press/1-min.jpg',
-          'image': 'images/press/1.jpg',
+          'thumbnail': '/images/press/1-min.jpg',
+          'image': '/images/press/1.jpg',
         },
         {
-          'thumbnail': 'images/press/2-min.jpg',
-          'image': 'images/press/2.jpg',
+          'thumbnail': '/images/press/2-min.jpg',
+          'image': '/images/press/2.jpg',
         },
         {
-          'thumbnail': 'images/press/3-min.jpg',
-          'image': 'images/press/3.jpg',
+          'thumbnail': '/images/press/3-min.jpg',
+          'image': '/images/press/3.jpg',
         },
         // {
-        //   'thumbnail': 'images/press/5-min.jpg',
-        //   'image': 'images/press/5.jpg',
+        //   'thumbnail': '/images/press/5-min.jpg',
+        //   'image': '/images/press/5.jpg',
         // },
         // {
-        //   'thumbnail': 'images/press/7.jpeg',
-        //   'image': 'images/press/7.jpeg',
+        //   'thumbnail': '/images/press/7.jpeg',
+        //   'image': '/images/press/7.jpeg',
         // },
         {
-          'thumbnail': 'images/press/6.jpeg',
-          'image': 'images/press/6.jpeg',
+          'thumbnail': '/images/press/6.jpeg',
+          'image': '/images/press/6.jpeg',
         },
       ]
     }
