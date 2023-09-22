@@ -16,7 +16,7 @@
 					</h3>
 					<h4 class="w-full md:w-1/5 mt-6 md:mt-0 flex flex-row justify-start md:justify-end font-semibold text-gray-600"
 						v-if="release.lyrics">
-						<a :href="release.lyrics" class="uppercase tracking-wide">
+						<a :href="release.lyrics" class="uppercase tracking-wide" target="__blank_genius">
 							<i class="fas fa-external-link-alt fa-lite text-xs mr-2"></i>
 							<span>Lyrics</span>
 						</a>
@@ -59,7 +59,9 @@
 							<div class="mt-6 md:mt-0">
 								<a class="w-full md:w-auto block bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold font-bold py-2 px-3 border border-gray-900 rounded shadow rounded items-center"
 									v-if="release.downloadLink"
-									@click.prevent="showDownloadDialog">
+									:href="release.downloadLink"
+									target="__blank_download"
+								>
 									<svg class="fill-current w-3 h-4 mr-2 inline-block" xmlns="http://www.w3.org/2000/svg" 
 										viewBox="0 0 20 20">
 										<path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>

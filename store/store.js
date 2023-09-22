@@ -77,9 +77,30 @@ export const state = () => ({
 			'albumOrder': 5,
 			'title': "A Dreamer's Song (Working for Good) - Band Version",
 			'image': '/images/changes/dreamers-song-band.jpg',
-			'lyrics': false,
+			'lyrics': 'https://genius.com/Dbilovd-a-dreamers-song-working-for-good-lyrics',
+			'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1607480214%3Fsecret_token%3Ds-vn4GYgk6fLh&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
 			'releasedDate': '22nd September, 2023',
-			'links': [],
+			'links': [
+				{
+					'name': "Youtube",
+					'url': 'https://youtu.be/LqitT1_VOo4',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				},
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/15m36pLsd8WP7Y21auTGXs?si=51488cc751ac42c6',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/a-dreamers-song-working-for-good/1704641420?i=1704641423',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
 			'secondaryLinks': [],
 			'press': {
 				'about': [
@@ -105,9 +126,30 @@ export const state = () => ({
 			'albumOrder': 1,
 			'title': "A Dreamer's Song (Working for Good)",
 			'image': '/images/changes/dreamers-song.jpg',
-			'lyrics': false, // 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
+			'lyrics': 'https://genius.com/Dbilovd-a-dreamers-song-working-for-good-lyrics',
 			'releasedDate': '22nd September, 2023',
-			'links': [],
+			'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1607480214%3Fsecret_token%3Ds-vn4GYgk6fLh&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+			'links': [
+				{
+					'name': "Youtube",
+					'url': 'https://youtu.be/um5CcwqD1gM',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				},
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/04aHexUJy4mDKoSbV9qLdb?si=68f34ff475a6454e',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/a-dreamers-song-working-for-good-band-version/1704641420?i=1704641425',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
 			'secondaryLinks': [],
 			'press': {
 				'about': [
