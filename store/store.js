@@ -58,44 +58,65 @@ export const state = () => ({
 		// 	'links': [],
 		// 	'secondaryLinks': [],
 		// },
-		// {
-		// 	'id': 'pictured-differently',
-		// 	'type': 'single',
-		// 	'albumId': 'project-changes',
-		// 	'albumOrder': 2,
-		// 	'title': "Pictured Differently",
-		// 	'image': '/images/changes/pictured-differently.jpg',
-		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
-		// 	'releasedDate': '29th September, 2023',
-		// 	'links': [],
-		// 	'secondaryLinks': [],
-		// },
 		{
-			'id': 'a-dreamers-song-band',
+			'id': 'pictured-differently',
 			'type': 'single',
 			'albumId': 'project-changes',
-			'albumOrder': 5,
-			'title': "A Dreamer's Song (Working for Good) - Band Version",
-			'image': '/images/changes/dreamers-song-band.jpg',
-			'lyrics': 'https://genius.com/Dbilovd-a-dreamers-song-working-for-good-lyrics',
-			'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1607480214%3Fsecret_token%3Ds-vn4GYgk6fLh&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-			'releasedDate': '22nd September, 2023',
+			'albumOrder': 3,
+			'title': "Pictured Differently",
+			'image': '/images/changes/pictured-differently.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-pictured-differently-lyrics',
+			'releasedDate': '13th October, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/lkNwEVjTDDc?si=E_8_PMdT8M1IgBTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
 			'links': [
 				{
 					'name': "Youtube",
-					'url': 'https://youtu.be/LqitT1_VOo4',
+					'url': 'https://youtu.be/lkNwEVjTDDc',
 					'actionText': 'Watch on Youtube',
 					'icon': 'fa-youtube'
 				},
 				{
 					'name': "Spotify",
-					'url': 'https://open.spotify.com/track/15m36pLsd8WP7Y21auTGXs?si=51488cc751ac42c6',
+					'url': 'https://open.spotify.com/track/2frITbDDLRmckLxoDVCeJ9?si=68fff043b36e47fc',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
 				{
 					'name': "Apple Music",
 					'url': 'https://music.apple.com/gh/album/a-dreamers-song-working-for-good/1704641420?i=1704641423',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [],
+		},
+		{
+			'id': 'a-dreamers-song',
+			'type': 'single',
+			'albumId': 'project-changes',
+			'albumOrder': 1,
+			'title': "A Dreamer's Song (Working for Good)",
+			'image': '/images/changes/dreamers-song.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-a-dreamers-song-working-for-good-lyrics',
+			'releasedDate': '22nd September, 2023',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/LqitT1_VOo4?si=opYiJnPhrO1M9aPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Youtube",
+					'url': 'https://youtu.be/um5CcwqD1gM',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				},
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/04aHexUJy4mDKoSbV9qLdb?si=68f34ff475a6454e',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/a-dreamers-song-working-for-good-band-version/1704641420?i=1704641425',
 					'actionText': 'Listen on Apple Music',
 					'icon': 'fa-apple'
 				}
@@ -120,31 +141,31 @@ export const state = () => ({
 			},
 		},
 		{
-			'id': 'a-dreamers-song',
+			'id': 'a-dreamers-song-band',
 			'type': 'single',
 			'albumId': 'project-changes',
-			'albumOrder': 1,
-			'title': "A Dreamer's Song (Working for Good)",
-			'image': '/images/changes/dreamers-song.jpg',
+			'albumOrder': 2,
+			'title': "A Dreamer's Song (Working for Good) - Band Version",
+			'image': '/images/changes/dreamers-song-band.jpg',
 			'lyrics': 'https://genius.com/Dbilovd-a-dreamers-song-working-for-good-lyrics',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/um5CcwqD1gM?si=YH5pTMM9Aox4UypM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
 			'releasedDate': '22nd September, 2023',
-			'soundcloudEmbed': '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1607480214%3Fsecret_token%3Ds-vn4GYgk6fLh&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
 			'links': [
 				{
 					'name': "Youtube",
-					'url': 'https://youtu.be/um5CcwqD1gM',
+					'url': 'https://youtu.be/LqitT1_VOo4',
 					'actionText': 'Watch on Youtube',
 					'icon': 'fa-youtube'
 				},
 				{
 					'name': "Spotify",
-					'url': 'https://open.spotify.com/track/04aHexUJy4mDKoSbV9qLdb?si=68f34ff475a6454e',
+					'url': 'https://open.spotify.com/track/15m36pLsd8WP7Y21auTGXs?si=51488cc751ac42c6',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
 				{
 					'name': "Apple Music",
-					'url': 'https://music.apple.com/gh/album/a-dreamers-song-working-for-good-band-version/1704641420?i=1704641425',
+					'url': 'https://music.apple.com/gh/album/a-dreamers-song-working-for-good/1704641420?i=1704641423',
 					'actionText': 'Listen on Apple Music',
 					'icon': 'fa-apple'
 				}
