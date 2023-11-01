@@ -46,23 +46,44 @@ export const state = () => ({
 		// 	'links': [],
 		// 	'secondaryLinks': [],
 		// },
-		// {
-		// 	'id': 'changes',
-		// 	'type': 'single',
-		// 	'albumId': 'project-changes',
-		// 	'albumOrder': 3,
-		// 	'title': "Changes",
-		// 	'image': '/images/changes/changes.jpg',
-		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
-		// 	'releasedDate': '20th October, 2023',
-		// 	'links': [],
-		// 	'secondaryLinks': [],
-		// },
+		{
+			'id': 'changes',
+			'type': 'single',
+			'albumId': 'project-changes',
+			'albumOrder': 3,
+			'title': "Changes",
+			'image': '/images/changes/changes.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-changes-lyrics',
+			'releasedDate': '27th October, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/JySwiHWn8Qc?si=oNoG273aWccH2GSK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Youtube",
+					'url': 'https://youtu.be/JySwiHWn8Qc',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				},
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/7h1UTHS5QDSe7UYre06AnW?si=-2wIcK4eSe6STA27zXEZLA',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/changes-single/1704650542',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [],
+		},
 		{
 			'id': 'pictured-differently',
 			'type': 'single',
 			'albumId': 'project-changes',
-			'albumOrder': 3,
+			'albumOrder': 2,
 			'title': "Pictured Differently",
 			'image': '/images/changes/pictured-differently.jpg',
 			'lyrics': 'https://genius.com/Dbilovd-pictured-differently-lyrics',
@@ -144,7 +165,7 @@ export const state = () => ({
 			'id': 'a-dreamers-song-band',
 			'type': 'single',
 			'albumId': 'project-changes',
-			'albumOrder': 2,
+			'albumOrder': 5,
 			'title': "A Dreamer's Song (Working for Good) - Band Version",
 			'image': '/images/changes/dreamers-song-band.jpg',
 			'lyrics': 'https://genius.com/Dbilovd-a-dreamers-song-working-for-good-lyrics',
