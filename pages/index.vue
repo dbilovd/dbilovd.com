@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="w-full h-screen">
+    <div class="w-full" style="height: 400px;">
       <div class="w-full h-full">
         <img
           src="/images/header-slider-3.jpg"

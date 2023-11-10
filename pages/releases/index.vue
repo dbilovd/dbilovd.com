@@ -64,6 +64,10 @@
 									<span class="block mt-1 text-xs">{{ channel.name }}</span>
 								</a>
 							</div>
+							<hr 
+								v-if="albumIndex < (albums.length - 1)"
+								class="my-6"
+							/>
 						</div>
 					</div>
 				</div>

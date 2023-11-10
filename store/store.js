@@ -6,9 +6,27 @@ export const state = () => ({
 			'title': 'Changes',
 			'image': '/images/changes/changes-ep.jpg',
 			'releasedDate': 'Sept to Nov, 2023',
-			'completed': false,
-			'description': "Life and it's changes",
+			'completed': true,
+			'description': "A collection of songs reflecting on what it means to go through the many disappointing changes of life, with a God who never changes and who has promised to work it all out for our good.",
 			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/3CxH4v8IEQMFJSbmxME0nI?si=vrNu027FQ-iquYJJ2HPc7Q',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/changes-ep/1705131072',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				},
+				{
+					'name': "Youtube",
+					'url': 'https://youtu.be/p7T5-M-t_HY',
+					'actionText': 'Listen on Youtube',
+					'icon': 'fa-youtube'
+				}
 			],
 		},
 		{
@@ -34,18 +52,39 @@ export const state = () => ({
 				},
 			],
 		},
-		// {
-		// 	'id': 'thou-who-changest-not',
-		// 	'type': 'single',
-		// 	'albumId': 'project-changes',
-		// 	'albumOrder': 5,
-		// 	'title': "Oh Thou Who Changest Not",
-		// 	'image': '/images/changes/oh-thou-who-changest-not.jpg',
-		// 	'lyrics': 'https://genius.com/Dbilovd-little-songwriter-boy-lyrics',
-		// 	'releasedDate': '10th November, 2023',
-		// 	'links': [],
-		// 	'secondaryLinks': [],
-		// },
+		{
+			'id': 'thou-who-changest-not',
+			'type': 'single',
+			'albumId': 'project-changes',
+			'albumOrder': 4,
+			'title': "Oh Thou Who Changest Not",
+			'image': '/images/changes/oh-thou-who-changest-not.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-oh-thou-who-changest-not-lyrics',
+			'releasedDate': '10th November, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/-sRKABMBw2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Youtube",
+					'url': 'https://youtu.be/-sRKABMBw2Q',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				},
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/7bMisXbickYuw6Bk8NrWwx?si=f13b7ecf66534b61',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/oh-thou-who-changest-not-single/1704683002',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [],
+		},
 		{
 			'id': 'changes',
 			'type': 'single',
