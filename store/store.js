@@ -53,6 +53,39 @@ export const state = () => ({
 			],
 		},
 		{
+			'id': 'hft-my-all-live',
+			'type': 'single',
+			'albumId': false,
+			'albumOrder': false,
+			'title': "My All (Live)",
+			'image': '/images/hft/my-all-live.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-my-all-lyrics',
+			'releasedDate': '23rd November, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': false,// '<iframe width="560" height="315" src="https://www.youtube.com/embed/-sRKABMBw2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				// {
+				// 	'name': "Youtube",
+				// 	'url': 'https://youtu.be/-sRKABMBw2Q',
+				// 	'actionText': 'Watch on Youtube',
+				// 	'icon': 'fa-youtube'
+				// },
+				{
+					'name': "Spotify",
+					'url': 'spotify:album:6AOD1DriGwQkgFKaBVQvZB',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				// {
+				// 	'name': "Apple Music",
+				// 	'url': 'https://music.apple.com/gh/album/oh-thou-who-changest-not-single/1704683002',
+				// 	'actionText': 'Listen on Apple Music',
+				// 	'icon': 'fa-apple'
+				// }
+			],
+			'secondaryLinks': [],
+		},
+		{
 			'id': 'thou-who-changest-not',
 			'type': 'single',
 			'albumId': 'project-changes',
