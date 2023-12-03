@@ -53,35 +53,56 @@ export const state = () => ({
 			],
 		},
 		{
-			'id': 'hft-my-all-live',
+			'id': 'hft-journey-live',
 			'type': 'single',
-			'albumId': false,
-			'albumOrder': false,
-			'title': "My All (Live)",
-			'image': '/images/hft/my-all-live.jpg',
-			'lyrics': 'https://genius.com/Dbilovd-my-all-lyrics',
-			'releasedDate': '23rd November, 2023',
+			'albumId': 'hft',
+			'albumOrder': 2,
+			'title': "Journey (Live)",
+			'image': '/images/hft/journey-live.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-journey-lyrics',
+			'releasedDate': '1st December, 2023',
 			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
-			'soundcloudEmbed': false,// '<iframe width="560" height="315" src="https://www.youtube.com/embed/-sRKABMBw2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/8z1DRIvvz4s?si=wiR3V2l3GibbHx5X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
 			'links': [
-				// {
-				// 	'name': "Youtube",
-				// 	'url': 'https://youtu.be/-sRKABMBw2Q',
-				// 	'actionText': 'Watch on Youtube',
-				// 	'icon': 'fa-youtube'
-				// },
 				{
 					'name': "Spotify",
 					'url': 'spotify:album:6AOD1DriGwQkgFKaBVQvZB',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
-				// {
-				// 	'name': "Apple Music",
-				// 	'url': 'https://music.apple.com/gh/album/oh-thou-who-changest-not-single/1704683002',
-				// 	'actionText': 'Listen on Apple Music',
-				// 	'icon': 'fa-apple'
-				// }
+				{
+					'name': "Apple Music",
+					'url': 'https://geo.music.apple.com/album/journey-live/1714007535?i=1714007536&app=music',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [],
+		},
+		{
+			'id': 'hft-my-all-live',
+			'type': 'single',
+			'albumId': 'hft',
+			'albumOrder': 2,
+			'title': "My All (Live)",
+			'image': '/images/hft/my-all-live.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-my-all-lyrics',
+			'releasedDate': '23rd November, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/CapY1z2FzK4?si=JL4RReQSfpm_WK_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/2hnGT3JJWAlfPKsctqanu5',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://geo.music.apple.com/album/my-all-live/1715433001?i=1715433008&app=music',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				},
 			],
 			'secondaryLinks': [],
 		},
@@ -416,6 +437,7 @@ export const state = () => ({
 			'id': 'hft-anvil',
 			'type': 'single',
 			'albumId': 'hft',
+			'albumOrder': 3,
 			'title': 'Anvil',
 			'image': '/images/anvil.png',
 			'lyrics': 'https://genius.com/Dbilovd-anvil-lyrics',
