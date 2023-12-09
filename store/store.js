@@ -1,5 +1,34 @@
 export const state = () => ({
 	releases: [
+		// {
+		// 	'id': 'project-christmas',
+		// 	'type': 'album',
+		// 	'title': 'Favour Anniversary',
+		// 	'image': '/images/changes/changes-ep.jpg',
+		// 	'releasedDate': '15th December, 2023',
+		// 	'completed': true,
+		// 	'description': "For 2 years now I have released an original Christmas song. Favour Anniversary is my Christmas song for 2023",
+		// 	'links': [
+		// 		{
+		// 			'name': "Spotify",
+		// 			'url': 'https://open.spotify.com/album/3CxH4v8IEQMFJSbmxME0nI?si=vrNu027FQ-iquYJJ2HPc7Q',
+		// 			'actionText': 'Listen on Spotify',
+		// 			'icon': 'fa-spotify'
+		// 		},
+		// 		{
+		// 			'name': "Apple Music",
+		// 			'url': 'https://music.apple.com/gh/album/changes-ep/1705131072',
+		// 			'actionText': 'Listen on Apple Music',
+		// 			'icon': 'fa-apple'
+		// 		},
+		// 		{
+		// 			'name': "Youtube",
+		// 			'url': 'https://youtu.be/p7T5-M-t_HY',
+		// 			'actionText': 'Listen on Youtube',
+		// 			'icon': 'fa-youtube'
+		// 		}
+		// 	],
+		// },
 		{
 			'id': 'project-changes',
 			'type': 'album',
@@ -49,6 +78,38 @@ export const state = () => ({
 					'url': 'https://soundcloud.com/dbilovd/sets/the-hymns-for-tomorrow-project',
 					'actionText': 'Listen on Soundcloud',
 					'icon': 'fa-soundcloud'
+				},
+			],
+		},
+		{
+			'id': 'holy-silent-night',
+			'type': 'single',
+			'albumId': '',
+			'albumOrder': false,
+			'title': "Oh Holy Night // Silent Night",
+			'image': '/images/singles/holy-silent-night.jpg',
+			'lyrics': false, // 'https://genius.com/Dbilovd-journey-lyrics',
+			'releasedDate': '8th December, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/Q2EqNL0e5Iw?si=HSD0dukbifSGg69B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/7n35M4epejkltbIgcqm8EX?si=4cbe64fe8f734af8',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/mt/album/o-holy-night-silent-night-single/1718252759',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				{
+					'name': "Other Platforms",
+					'url': 'https://fanlink.to/dbhnsn',
 				},
 			],
 		},
