@@ -32,7 +32,7 @@
             to="/releases"
             class="block uppercase tracking-wide text-gray-600 border-b-4 border-gray-600 mt-4 md:mt-0"
           >
-            See More ...
+            See All Releases
           </nuxt-link>
         </div>
 
@@ -40,9 +40,9 @@
           <span class="block">Keep watching this space</span>
           <span class="block">There is new music coming soon...</span>
         </h3>
-        <div class="flex flex-col md:flex-row justify-start">
+        <div class="flex flex-wrap flex-col md:flex-row justify-start">
           <div
-            class="w-full md:w-1/3 mt-4 md:mt-0 md:mr-4"
+            class="w-full md:w-1/3 pt-4 md:px-2"
             v-for="(single, singleIndex) in singles"
             :key="singleIndex"
           >
@@ -165,7 +165,7 @@ const HomePage = {
 
   computed: {
     ...mapGetters({
-      singles: "threeMostRecentReleases",
+      singles: "mostRecentReleases",
       streams: "musicLinks",
       posts: "latestThreePosts",
       descriptionLines: "descriptionLines",

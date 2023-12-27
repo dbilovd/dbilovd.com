@@ -82,6 +82,65 @@ export const state = () => ({
 			],
 		},
 		{
+			'id': 'story-to-tell',
+			'type': 'single',
+			'albumId': '',
+			'albumOrder': false,
+			'title': "The Story to Tell",
+			'image': '/images/singles/story-to-tell.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-the-story-to-tell-lyrics',
+			'releasedDate': '29th December, 2023',
+			'downloadLink': 'https://hypeddit.com/dbilovd/thestorytotell',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/mLkD2RUP3uw?si=77IrGo-qOTR_cKxT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/playlist/6TceD5H4zrwvrRbPziHB9x?si=54bc6c4cb13e4c81',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/mt/album/o-holy-night-silent-night-single/1718252759',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				{
+					'name': "Other Platforms",
+					'url': 'https://fanlink.to/dbhnsn',
+				},
+			],
+		},
+		{
+			'id': 'favour-anniversary',
+			'type': 'single',
+			'albumId': '',
+			'albumOrder': false,
+			'title': "Favour Anniversary",
+			'image': '/images/singles/favour-anniversary.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-favour-anniversary-lyrics',
+			'releasedDate': '15th December, 2023',
+			'downloadLink': 'https://dbilovdmusic.ck.page/f1b8d0883d',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/aLf8ubA8B50?si=Mocbh4Wp3HIozPAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/track/6I2ozqJrPNnCNup6gQ8nZh?si=8290a19b722e4cd2',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/mt/album/favour-anniversary/1720121404?i=1720121412',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [],
+		},
+		{
 			'id': 'holy-silent-night',
 			'type': 'single',
 			'albumId': '',
@@ -778,6 +837,10 @@ export const getters = {
 	threeMostRecentReleases: (state) => {
 		return state.releases.filter((release) => release.type == 'single')
 			.slice(0, 3);
+	},
+	mostRecentReleases: (state) =>{
+		return state.releases.filter((release) => release.type == 'single')
+			.slice(0, 6);
 	},
 	musicLinks: (state)  => state.links.filter((link) => link.type == 'music'),
 	socialMediaLinks: (state)  => state.links.filter((link) => link.type == 'social'),
