@@ -30,9 +30,38 @@ export const state = () => ({
 		// 	],
 		// },
 		{
+			'id': 'project-hope',
+			'type': 'album',
+			'title': 'The Hope ☀️ Project',
+			'image': '/images/hope/psalm-20.png',
+			'releasedDate': 'From Feb, 2024',
+			'completed': false,
+			'description': "A collection of hymns of hope for anyone on a journey to find land. Their promised land.",
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/0KoLUUG7wBqFkfYqjGKtYr?si=g4zsMJsRRaWYgAnSWIiXVQ',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/au/album/psalm-20-1-5-single/1729561170',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				},
+				{
+					'name': "Youtube",
+					'url': 'https://www.youtube.com/watch?v=mLkD2RUP3uw&list=PLXgoR4JtAyBr0w4Aj7FqBK3o7cQYGKjFk&index=2',
+					'actionText': 'Watch on Youtube',
+					'icon': 'fa-youtube'
+				}
+			],
+		},
+		{
 			'id': 'project-changes',
 			'type': 'album',
-			'title': 'Changes',
+			'title': 'The Changes 🌓 Project',
 			'image': '/images/changes/changes-ep.jpg',
 			'releasedDate': 'Sept to Nov, 2023',
 			'completed': true,
@@ -82,9 +111,73 @@ export const state = () => ({
 			],
 		},
 		{
+			'id': 'psalm-20',
+			'type': 'single',
+			'albumId': 'project-hope',
+			'albumOrder': false,
+			'title': "Psalm 20:1-5 (Acoustic Version)",
+			'image': '/images/hope/psalm-20.png',
+			'lyrics': 'https://genius.com/Dbilovd-psalm-20-lyrics',
+			'releasedDate': '9th February, 2024',
+			'downloadLink': 'https://dbilovd.wecr8.to/d/psalm-20',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/0KoLUUG7wBqFkfYqjGKtYr?si=g4zsMJsRRaWYgAnSWIiXVQ',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/mt/album/o-holy-night-silent-night-single/1718252759',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				{
+					'name': "Other Platforms",
+					'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				},
+			],
+		},
+		{
+			'id': 'you-are-worthy',
+			'type': 'single',
+			'albumId': 'project-hope',
+			'albumOrder': false,
+			'title': "You Are Worthy",
+			'image': '/images/hope/you-are-worthy.png',
+			'lyrics': 'https://genius.com/Dbilovd-you-are-worthy-lyrics',
+			'releasedDate': '9th February, 2024',
+			'downloadLink': 'https://dbilovd.wecr8.to/d/you-are-worthy',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/playlist/6TceD5H4zrwvrRbPziHB9x?si=54bc6c4cb13e4c81',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/mt/album/o-holy-night-silent-night-single/1718252759',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				{
+					'name': "Other Platforms",
+					'url': 'https://dbilovd.wecr8.to/s/you-are-worthy',
+				},
+			],
+		},
+		{
 			'id': 'story-to-tell',
 			'type': 'single',
-			'albumId': '',
+			'albumId': 'project-hope',
 			'albumOrder': false,
 			'title': "The Story to Tell",
 			'image': '/images/singles/story-to-tell.jpg',
