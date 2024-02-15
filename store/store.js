@@ -117,7 +117,7 @@ export const state = () => ({
 			'albumOrder': false,
 			'title': "Psalm 20:1-5 (Acoustic Version)",
 			'image': '/images/hope/psalm-20.png',
-			'lyrics': 'https://genius.com/Dbilovd-psalm-20-lyrics',
+			'lyrics': 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
 			'releasedDate': '9th February, 2024',
 			'downloadLink': 'https://dbilovd.wecr8.to/d/psalm-20',
 			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
