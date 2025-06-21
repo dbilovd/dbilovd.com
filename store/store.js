@@ -1,39 +1,70 @@
 export const state = () => ({
 	releases: [
-		// {
-		// 	'id': 'project-christmas',
-		// 	'type': 'album',
-		// 	'title': 'Favour Anniversary',
-		// 	'image': '/images/changes/changes-ep.jpg',
-		// 	'releasedDate': '15th December, 2023',
-		// 	'completed': true,
-		// 	'description': "For 2 years now I have released an original Christmas song. Favour Anniversary is my Christmas song for 2023",
-		// 	'links': [
-		// 		{
-		// 			'name': "Spotify",
-		// 			'url': 'https://open.spotify.com/album/3CxH4v8IEQMFJSbmxME0nI?si=vrNu027FQ-iquYJJ2HPc7Q',
-		// 			'actionText': 'Listen on Spotify',
-		// 			'icon': 'fa-spotify'
-		// 		},
-		// 		{
-		// 			'name': "Apple Music",
-		// 			'url': 'https://music.apple.com/gh/album/changes-ep/1705131072',
-		// 			'actionText': 'Listen on Apple Music',
-		// 			'icon': 'fa-apple'
-		// 		},
-		// 		{
-		// 			'name': "Youtube",
-		// 			'url': 'https://youtu.be/p7T5-M-t_HY',
-		// 			'actionText': 'Listen on Youtube',
-		// 			'icon': 'fa-youtube'
-		// 		}
-		// 	],
-		// },
+		/*
+			{
+				'id': 'project-christmas',
+				'type': 'album',
+				'title': 'Favour Anniversary',
+				'image': '/images/changes/changes-ep.jpg',
+				'releasedDate': '15th December, 2023',
+				'completed': true,
+				'description': "For 2 years now I have released an original Christmas song. Favour Anniversary is my Christmas song for 2023",
+				'links': [
+					{
+						'name': "Spotify",
+						'url': 'https://open.spotify.com/album/3CxH4v8IEQMFJSbmxME0nI?si=vrNu027FQ-iquYJJ2HPc7Q',
+						'actionText': 'Listen on Spotify',
+						'icon': 'fa-spotify'
+					},
+					{
+						'name': "Apple Music",
+						'url': 'https://music.apple.com/gh/album/changes-ep/1705131072',
+						'actionText': 'Listen on Apple Music',
+						'icon': 'fa-apple'
+					},
+					{
+						'name': "Youtube",
+						'url': 'https://youtu.be/p7T5-M-t_HY',
+						'actionText': 'Listen on Youtube',
+						'icon': 'fa-youtube'
+					}
+				],
+			},
+		*/
+		{
+			'id': 'project-oasis',
+			'type': 'album',
+			'title': 'The Oasis 🏝️',
+			'image': '/images/oasis/oasis.png',
+			'releasedDate': 'From July, 2025',
+			'completed': false,
+			'description': "Songs celebrating the gift of a place of rest and peace of a wife that I have received from God.",
+			'links': [
+				// {
+				// 	'name': "Spotify",
+				// 	'url': 'https://open.spotify.com/album/0KoLUUG7wBqFkfYqjGKtYr?si=g4zsMJsRRaWYgAnSWIiXVQ',
+				// 	'actionText': 'Listen on Spotify',
+				// 	'icon': 'fa-spotify'
+				// },
+				// {
+				// 	'name': "Apple Music",
+				// 	'url': 'https://music.apple.com/au/album/psalm-20-1-5-single/1729561170',
+				// 	'actionText': 'Listen on Apple Music',
+				// 	'icon': 'fa-apple'
+				// },
+				// {
+				// 	'name': "Youtube",
+				// 	'url': 'https://www.youtube.com/watch?v=mLkD2RUP3uw&list=PLXgoR4JtAyBr0w4Aj7FqBK3o7cQYGKjFk&index=2',
+				// 	'actionText': 'Watch on Youtube',
+				// 	'icon': 'fa-youtube'
+				// }
+			],
+		},
 		{
 			'id': 'project-hope',
 			'type': 'album',
 			'title': 'The Hope ☀️ Project',
-			'image': '/images/hope/psalm-20.png',
+			'image': '/images/hope/waves.jpg',
 			'releasedDate': 'From Feb, 2024',
 			'completed': false,
 			'description': "A collection of hymns of hope for anyone on a journey to find land. Their promised land.",
@@ -111,6 +142,102 @@ export const state = () => ({
 			],
 		},
 		{
+			'id': 'waves',
+			'type': 'single',
+			'albumId': 'project-hope',
+			'albumOrder': false,
+			'title': "Waves, clouds, and the risen Son",
+			'image': '/images/hope/waves.jpg',
+			'lyrics': false, // 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
+			'releasedDate': '29th March, 2024',
+			'downloadLink': false, // 'https://dbilovd.wecr8.to/d/psalm-20',
+			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/2zvCd2rX9NlbL8HhUl2o1K?si=jQt2xCjdSMevQTvFiaKGbg',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/waves-clouds-and-the-risen-son-ep/1735885477',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				// {
+				// 	'name': "Other Platforms",
+				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				// },
+			],
+		},
+		{
+			'id': 'gods-call',
+			'type': 'single',
+			'albumId': 'project-return',
+			'albumOrder': false,
+			'title': "God's Call",
+			'image': '/images/return/Gods-call.jpg',
+			'lyrics': false, // 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
+			'releasedDate': '1st March, 2024',
+			'downloadLink': false, // 'https://dbilovd.wecr8.to/d/psalm-20',
+			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/6i6bhnl44PNGRJK5s0xGxS?si=je_0DDRbREuoqOqkTVU0og',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/gods-call-single/1732412337',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				// {
+				// 	'name': "Other Platforms",
+				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				// },
+			],
+		},
+		{
+			'id': 'anchor-anvil',
+			'type': 'single',
+			'albumId': 'project-hope',
+			'albumOrder': false,
+			'title': "Anchor (Avil)",
+			'image': '/images/hope/anchor-anvil.jpg',
+			'lyrics': false, // 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
+			'releasedDate': '23rd February, 2024',
+			'downloadLink': false, // 'https://dbilovd.wecr8.to/d/psalm-20',
+			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/6K5FYAGV6WwStZrG1jX5Cz?si=HpRJKllAQXebmouLMGbN-w',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/anchor-anvil-ep/1729841480',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				// {
+				// 	'name': "Other Platforms",
+				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				// },
+			],
+		},
+		{
 			'id': 'psalm-20',
 			'type': 'single',
 			'albumId': 'project-hope',
@@ -120,17 +247,17 @@ export const state = () => ({
 			'lyrics': 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
 			'releasedDate': '9th February, 2024',
 			'downloadLink': 'https://dbilovd.wecr8.to/d/psalm-20',
-			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/auifTiEgzbM?si=95yBJcO78V8KJKmw" title="Psalm 20:1-5 Acoustic Version [Official Lyrics Video] on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
 			'links': [
 				{
 					'name': "Spotify",
-					'url': 'https://open.spotify.com/album/0KoLUUG7wBqFkfYqjGKtYr?si=g4zsMJsRRaWYgAnSWIiXVQ',
+					'url': 'https://open.spotify.com/album/0KoLUUG7wBqFkfYqjGKtYr?si=YExslIv8T9yiD7jYwAg8DQ',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
 				{
 					'name': "Apple Music",
-					'url': 'https://music.apple.com/mt/album/o-holy-night-silent-night-single/1718252759',
+					'url': 'https://music.apple.com/gh/album/psalm-20-1-5-single/1729561170',
 					'actionText': 'Listen on Apple Music',
 					'icon': 'fa-apple'
 				}
