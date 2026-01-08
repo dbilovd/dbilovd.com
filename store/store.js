@@ -184,13 +184,13 @@ export const state = () => ({
 			'links': [
 				{
 					'name': "Spotify",
-					'url': 'https://open.spotify.com/album/2zvCd2rX9NlbL8HhUl2o1K?si=jQt2xCjdSMevQTvFiaKGbg',
+					'url': 'https://open.spotify.com/album/1rYSFEwRogmX3eDChbHcgl',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
 				{
 					'name': "Apple Music",
-					'url': 'https://music.apple.com/gh/album/waves-clouds-and-the-risen-son-ep/1735885477',
+					'url': 'https://music.apple.com/gh/album/the-best-is-still-to-come-single/1864301682',
 					'actionText': 'Listen on Apple Music',
 					'icon': 'fa-apple'
 				}
