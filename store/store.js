@@ -32,11 +32,40 @@ export const state = () => ({
 			},
 		*/
 		{
+			'id': 'project-rephidim',
+			'type': 'album',
+			'title': 'Rephidim 🌵',
+			'image': '/images/rephidim/tbistc.jpg',
+			'releasedDate': 'January, 2026',
+			'completed': false,
+			'description': "Songs about God's provision and faithfulness in the desert places of life.",
+			'links': [
+				// {
+				// 	'name': "Spotify",
+				// 	'url': 'https://open.spotify.com/album/0KoLUUG7wBqFkfYqjGKtYr?si=g4zsMJsRRaWYgAnSWIiXVQ',
+				// 	'actionText': 'Listen on Spotify',
+				// 	'icon': 'fa-spotify'
+				// },
+				// {
+				// 	'name': "Apple Music",
+				// 	'url': 'https://music.apple.com/au/album/psalm-20-1-5-single/1729561170',
+				// 	'actionText': 'Listen on Apple Music',
+				// 	'icon': 'fa-apple'
+				// },
+				// {
+				// 	'name': "Youtube",
+				// 	'url': 'https://www.youtube.com/watch?v=mLkD2RUP3uw&list=PLXgoR4JtAyBr0w4Aj7FqBK3o7cQYGKjFk&index=2',
+				// 	'actionText': 'Watch on Youtube',
+				// 	'icon': 'fa-youtube'
+				// }
+			],
+		},
+		{
 			'id': 'project-oasis',
 			'type': 'album',
 			'title': 'The Oasis 🏝️',
 			'image': '/images/oasis/oasis.png',
-			'releasedDate': 'From July, 2025',
+			'releasedDate': 'July, 2025',
 			'completed': false,
 			'description': "Songs celebrating the gift of a place of rest and peace of a wife that I have received from God.",
 			'links': [
@@ -65,8 +94,8 @@ export const state = () => ({
 			'type': 'album',
 			'title': 'The Hope ☀️ Project',
 			'image': '/images/hope/waves.jpg',
-			'releasedDate': 'From Feb, 2024',
-			'completed': false,
+			'releasedDate': '2024',
+			'completed': true,
 			'description': "A collection of hymns of hope for anyone on a journey to find land. Their promised land.",
 			'links': [
 				{
@@ -139,6 +168,70 @@ export const state = () => ({
 					'actionText': 'Listen on Soundcloud',
 					'icon': 'fa-soundcloud'
 				},
+			],
+		},
+		{
+			'id': 'tbistc',
+			'type': 'single',
+			'albumId': 'project-rephidim',
+			'albumOrder': false,
+			'title': "The Best Is Still to Come",
+			'image': '/images/rephidim/tbistc.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-the-best-is-still-to-come-lyrics',
+			'releasedDate': '9th January, 2026',
+			'downloadLink': 'https://dbilovd.cr8.fan/d/tbistc',
+			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/2zvCd2rX9NlbL8HhUl2o1K?si=jQt2xCjdSMevQTvFiaKGbg',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/waves-clouds-and-the-risen-son-ep/1735885477',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				// {
+				// 	'name': "Other Platforms",
+				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				// },
+			],
+		},
+		{
+			'id': 'oasis',
+			'type': 'single',
+			'albumId': 'project-oasis',
+			'albumOrder': false,
+			'title': "Oasis",
+			'image': '/images/oasis/oasis.png',
+			'lyrics': false, // 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
+			'releasedDate': '3rd July, 2025',
+			'downloadLink': false, // 'https://dbilovd.wecr8.to/d/psalm-20',
+			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/2zvCd2rX9NlbL8HhUl2o1K?si=jQt2xCjdSMevQTvFiaKGbg',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/waves-clouds-and-the-risen-son-ep/1735885477',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				// {
+				// 	'name': "Other Platforms",
+				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				// },
 			],
 		},
 		{
