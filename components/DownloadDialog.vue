@@ -67,10 +67,6 @@
 </template>
 
 <script type="text/javascript">
-	import axios from 'axios';
-	import jsonp from 'jsonp';
-	import queryString from 'query-string';
-
 	const DownloadDialog = {
 		props: {
 			showingDialog: {
@@ -100,37 +96,8 @@
 			},
 
 			subscribeAndDownload () {
-				// let downloadTab = window.open(this.downloadLink, '__blank');
-				// downloadTab.focus();
-
 				let formElement = document.getElementById('subscription-form');
 				formElement.submit();
-
-				return;
-				/*
-				let formData = Object.fromEntries(
-					new FormData(formElement)
-				);
-				debugger;
-				fetch(this.subscribe.destination, {
-						params: formData
-					})
-					.then((resp) => {
-						debugger;
-					})
-					.catch((err) => {
-						debugger;
-					});
-				*/
-
-
-			// // formData being an object with your form data like:
-			// // { EMAIL: 'emailofyouruser@gmail.com' }
-
-			// 	jsonp(`${this.subscribe.destination}&${queryString.stringify(formData)}`, {}, (err, data) => {
-			//   	console.log(err);
-			//   	console.log(data);
-			// 	});
 			}
 		}
 	};

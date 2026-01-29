@@ -41,7 +41,7 @@
 								<p class="mt-2">{{ album.description }}</p>
 								<div class="my-8">
 									Songs: 
-									<div class="flex flex-col">
+									<div class="flex flex-col mt-2 space-y-2">
 										<nuxt-link v-for="(single, singleId) in getAlbumSingles(album.id)" 
 											:key="singleId"
 											:to="`/releases/singles/${single.id}`"

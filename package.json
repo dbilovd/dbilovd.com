@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^24.0.0",
     "autoprefixer": "^10.4.14",
     "nuxt": "^4.2.2",

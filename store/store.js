@@ -35,8 +35,8 @@ export const state = () => ({
 			'id': 'project-rephidim',
 			'type': 'album',
 			'title': 'Rephidim 🌵',
-			'image': '/images/rephidim/tbistc.jpg',
-			'releasedDate': 'January, 2026',
+			'image': '/images/rephidim/rephidim.jpg',
+			'releasedDate': 'From January, 2026',
 			'completed': false,
 			'description': "Songs about God's provision and faithfulness in the desert places of life.",
 			'links': [
@@ -67,7 +67,7 @@ export const state = () => ({
 			'image': '/images/oasis/oasis.png',
 			'releasedDate': 'July, 2025',
 			'completed': false,
-			'description': "Songs celebrating the gift of a place of rest and peace of a wife that I have received from God.",
+			'description': "Songs celebrating the gift of a place of rest and peace (my Wife) that I have received from God.",
 			'links': [
 				// {
 				// 	'name': "Spotify",
@@ -170,11 +170,44 @@ export const state = () => ({
 				},
 			],
 		},
+		/*
+		{
+			'id': 'twbd',
+			'type': 'single',
+			'albumId': 'project-rephidim',
+			'albumOrder': 2,
+			'title': "Thy Will Be Done (My God, My Father, While I Stray)",
+			'image': '/images/rephidim/twbd.jpg',
+			'lyrics': 'https://genius.com/Dbilovd-thy-will-be-done-lyrics',
+			'releasedDate': '6th January, 2026',
+			'downloadLink': 'https://dbilovd.cr8.fan/d/twbd',
+			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'links': [
+				{
+					'name': "Spotify",
+					'url': 'https://open.spotify.com/album/1rYSFEwRogmX3eDChbHcgl',
+					'actionText': 'Listen on Spotify',
+					'icon': 'fa-spotify'
+				},
+				{
+					'name': "Apple Music",
+					'url': 'https://music.apple.com/gh/album/the-best-is-still-to-come-single/1864301682',
+					'actionText': 'Listen on Apple Music',
+					'icon': 'fa-apple'
+				}
+			],
+			'secondaryLinks': [
+				// {
+				// 	'name': "Other Platforms",
+				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
+				// },
+			],
+		},*/
 		{
 			'id': 'tbistc',
 			'type': 'single',
 			'albumId': 'project-rephidim',
-			'albumOrder': false,
+			'albumOrder': 5,
 			'title': "The Best Is Still to Come",
 			'image': '/images/rephidim/tbistc.jpg',
 			'lyrics': 'https://genius.com/Dbilovd-the-best-is-still-to-come-lyrics',
@@ -201,6 +234,19 @@ export const state = () => ({
 				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
 				// },
 			],
+			'fullLyrics': `<h3 id="verse-1">Verse 1</h3>
+<p>Like a man screaming "encore"<br>When the whole band is gone<br>I sometimes look back to shore<br>Where I&#39;m sailing from<br>Nostalgia tells me tales<br>Of roses without thorns<br>I forget the whips and the weights<br>But the meats and melons<br>I so easily recall  </p>
+<h3 id="chorus">Chorus</h3>
+<p>But the best is still to come<br>It is not where I have been<br>It's not in my memories<br>The best is where You lead<br>The best is where You are taking me  </p>
+<h3 id="verse-2">Verse 2</h3>
+<p>Like a child throwing tantrums<br>Over a box of sand<br>Because they can&#39;t conceive a day at the beach<br>I&#39;m far too easily pleased<br>By things that hold no worth<br>They may look like things that I need<br>But Your promises hold far greater rewards</p>
+<h3 id="chorus">Chorus</h3>
+<p>And the best is still to come<br>It is not the things I've seen<br>It&#39;s not in my memories<br>The best is where You lead<br>The best is where You are taking me<br>You might also like  </p>
+<h3 id="bridge">Bridge</h3>
+<p>Open my eyes to see<br>The weight of the Glory that lies ahead<br>To what You have in store for me<br>All my present pains can not compare<br>Open my eyes to see<br>The weight of the Glory that lies ahead<br>To what You have in store for me<br>Lord, all my present pains can not compare  </p>
+<h3 id="chorus">Chorus</h3>
+<p>For the best is still to come<br>It is not these things I see<br>No, this is not all there is<br>The best is where You lead<br>The best is where You have promised me<br>It is not these things I see<br>No, this is not all there is<br>The best is where You lead<br>The best is where You have promised me  </p>
+`,
 		},
 		{
 			'id': 'oasis',
@@ -303,7 +349,7 @@ export const state = () => ({
 			'type': 'single',
 			'albumId': 'project-hope',
 			'albumOrder': false,
-			'title': "Anchor (Avil)",
+			'title': "Anchor (Anvil)",
 			'image': '/images/hope/anchor-anvil.jpg',
 			'lyrics': false, // 'https://genius.com/Dbilovd-psalm-20-1-5-acoustic-version-lyrics',
 			'releasedDate': '23rd February, 2024',

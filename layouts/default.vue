@@ -47,7 +47,7 @@
             >Lyrics</a
           >
           <router-link to="/about" class="ml-4">About</router-link>
-          <router-link to="/support" class="ml-4">Support</router-link>
+          <!-- <router-link to="/support" class="ml-4">Support</router-link> -->
         </div>
       </nav>
     </div>
