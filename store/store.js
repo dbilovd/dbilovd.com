@@ -180,7 +180,7 @@ export const state = () => ({
 			'lyrics': 'https://genius.com/Dbilovd-thy-will-be-done-lyrics',
 			'releasedDate': '6th January, 2026',
 			'downloadLink': 'https://dbilovd.cr8.fan/d/twbd',
-			'soundcloudEmbed': false, // '<iframe width="560" height="315" src="https://www.youtube.com/embed/b9p-XShI8Bs?si=77IrGo-qOTR_cKxT" title="You are Worthy on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+			'soundcloudEmbed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/RJwpxd3yMzU?si=SgvMgBjL4qhSxASH" title="Watch Dbilovd - Thy Will Be Done (My God, My Father, While I Stray) [Official Lyrics Video] on Youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
 			'links': [
 				{
 					'name': "Spotify",
@@ -201,7 +201,7 @@ export const state = () => ({
 					'url': 'https://dbilovd.cr8.fan/s/twbd',
 				},
 			],
-			fullLyrics: `<h4>Chorus</h4>
+			'fullLyrics': `<h4>Chorus</h4>
 <p>Thy will be done<br>They will be done<br>Oh teach me from my heart to say<br>They will be done  </p>
 <h4>Verse 1</h4>
 <p>My God, my Father, while I stray<br>Far from my home on life&#39;s rough way<br>Oh, teach me from my heart to say<br>&quot;Thy will be done&quot;<br>Though dark my path and sad my lot<br>Let me be still and murmur not<br>Or breathe the prayer divinely taught<br>&quot;Thy will be done&quot;  </p>
