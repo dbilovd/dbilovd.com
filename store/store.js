@@ -170,7 +170,6 @@ export const state = () => ({
 				},
 			],
 		},
-		/*
 		{
 			'id': 'twbd',
 			'type': 'single',
@@ -185,24 +184,33 @@ export const state = () => ({
 			'links': [
 				{
 					'name': "Spotify",
-					'url': 'https://open.spotify.com/album/1rYSFEwRogmX3eDChbHcgl',
+					'url': 'https://open.spotify.com/album/4oN4TGk0MOtsp8jnlLZowH?si=KcN-GKRgR1e6-FcRIsIf1Q',
 					'actionText': 'Listen on Spotify',
 					'icon': 'fa-spotify'
 				},
 				{
 					'name': "Apple Music",
-					'url': 'https://music.apple.com/gh/album/the-best-is-still-to-come-single/1864301682',
+					'url': 'https://music.apple.com/gh/album/thy-will-be-done-my-god-my-father-while-i-stray-single/1872486936',
 					'actionText': 'Listen on Apple Music',
 					'icon': 'fa-apple'
 				}
 			],
 			'secondaryLinks': [
-				// {
-				// 	'name': "Other Platforms",
-				// 	'url': 'https://dbilovd.wecr8.to/s/psalm-20',
-				// },
+				{
+					'name': "Other Platforms",
+					'url': 'https://dbilovd.cr8.fan/s/twbd',
+				},
 			],
-		},*/
+			fullLyrics: `<h4>Chorus</h4>
+<p>Thy will be done<br>They will be done<br>Oh teach me from my heart to say<br>They will be done  </p>
+<h4>Verse 1</h4>
+<p>My God, my Father, while I stray<br>Far from my home on life&#39;s rough way<br>Oh, teach me from my heart to say<br>&quot;Thy will be done&quot;<br>Though dark my path and sad my lot<br>Let me be still and murmur not<br>Or breathe the prayer divinely taught<br>&quot;Thy will be done&quot;  </p>
+<h4>Verse 2</h4>
+<p>Though Thou has called me to resign<br>What most I prized, never was mine<br>I only yielded what was Thine<br>&quot;Thy will be done&quot;<br>Renew my will from day to day<br>Blend it with Thine and take away<br>All that now makes it hard to say<br>&quot;Thy will be done&quot;  </p>
+<h4>Verse 3</h4>
+<p>Let my fainting heart be blessed<br>With You sweet Spirit for its guest<br>My God, to Thee I leave the rest<br>&quot;Thy will be done&quot;<br>Then, when on earth I breathe no more<br>The prayer, oft mixed with tears before<br>I&#39;ll sing upon a happier shore<br>Thy will be done  </p>
+`
+		},
 		{
 			'id': 'tbistc',
 			'type': 'single',
